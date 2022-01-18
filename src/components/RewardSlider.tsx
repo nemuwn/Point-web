@@ -8,7 +8,7 @@ const CardContentDesc = styled.div`
   width: auto;
   height: auto;
   max-width: 1440px;
-  padding-top: 100px;
+
   flex-direction: column;
   justify-content: flex-start;
   flex: 0 auto;
@@ -31,7 +31,7 @@ const CardContentDesc = styled.div`
     color: #000;
   }
   .desc {
-    width: 515px;
+    width: 450px;
     p {
       margin-top: 10px;
       font-family: "Sequel Sans (Display)", sans-serif;

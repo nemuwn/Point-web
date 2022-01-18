@@ -26,6 +26,7 @@ export const RewardDatas = [
     description:
       "Earn exceptional rewards, including bonus cash-back on your subscriptions like Netflix, Spotify, HBO Max, Hulu, and more.",
     img: "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/618952d55a5afd3e9b617555_1654_subscriptions_P3_wide_2x-76.jpg",
+    btn: "5x",
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ export const RewardDatas = [
     description:
       "PointCard rewards you for spending on delivery from apps like DoorDash and on rides from services like Uber.",
     img: "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/618953bbf24c81a4a41ef43c_3112_dining_P3_wide_2x-76.jpg",
+    btn: "3x",
   },
   {
     id: 3,
@@ -40,6 +42,7 @@ export const RewardDatas = [
     description:
       "Earn points on every dollar you spend — anywhere, anytime. That means cash-back for every purchase, from groceries to gas and everything in-between.",
     img: "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a9424ddc834f0019759ed0_0082_everything_P3_wide_2x.jpg",
+    btn: "1x",
   },
 ];
 

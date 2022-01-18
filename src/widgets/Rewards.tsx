@@ -80,6 +80,13 @@ export const Bullet = styled.div`
     transition: color 500ms ease;
     transition: background-color 500ms ease;
   }
+
+  .dot.active {
+    background-color: #000;
+    h3 {
+      color: #ffffff;
+    }
+  }
 `;
 
 export const CarouselBtn = styled.div`
@@ -132,6 +139,10 @@ export function Rewards({ slides }) {
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
+
+  const moveDot = (index) => {
+    setCurrent(index);
+  };
   return (
     <Container>
       <Slider>
@@ -155,15 +166,20 @@ export function Rewards({ slides }) {
       <CarouselBtn>
         <div className="cBtns">
           <div className="indicat">
-            <Bullet>
-              <h3>5X</h3>
-            </Bullet>
-            <Bullet className="in2">
+            {RewardDatas.map((values, index) => (
+              <Bullet
+                onClick={() => moveDot(index)}
+                className={current === index + 1 ? "dot active" : "dot"}
+              >
+                <h3>{values.btn}</h3>
+              </Bullet>
+            ))}
+            {/* <Bullet>
               <h3>3X</h3>
             </Bullet>
-            <Bullet className="in3">
+            <Bullet>
               <h3>1X</h3>
-            </Bullet>
+            </Bullet> */}
           </div>
           <div className="arrows">
             <Bullet className="sArrow arrLeft" onClick={prevSlide}>
