@@ -103,7 +103,7 @@ export const RewardSlider = ({
   return (
     <>
       <CardContent2>
-        <CardContentDesc>
+        <CardContentDesc data-aos="fade-right">
           <div className="subheading">Rewards</div>
           <h2>{title}</h2>
           <div className="desc">

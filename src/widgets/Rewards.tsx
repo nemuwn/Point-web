@@ -1,12 +1,5 @@
 import styled from "styled-components";
 import React, { Component, useState } from "react";
-import ReactDOM from "react-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-// import { Container } from "@/components/Container";
-import { CardContent2 } from "@/components/CardContent";
-import { ApplyButton } from "@/components/LearnMoreBtn";
-import { PrevBtn, NexBtn } from "@/components/Button";
 import { RewardSlider } from "@/components/RewardSlider";
 import { RewardDatas } from "@/utils/datas";
 
@@ -165,7 +158,7 @@ export function Rewards({ slides }) {
       </Slider>
       <CarouselBtn>
         <div className="cBtns">
-          <div className="indicat">
+          <div className="indicat" data-aos="fade-right">
             {RewardDatas.map((values, index) => (
               <Bullet
                 onClick={() => moveDot(index)}
@@ -181,7 +174,7 @@ export function Rewards({ slides }) {
               <h3>1X</h3>
             </Bullet> */}
           </div>
-          <div className="arrows">
+          <div className="arrows" data-aos="fade-left">
             <Bullet className="sArrow arrLeft" onClick={prevSlide}>
               <img
                 src="https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/5f318accd2b9306aa790f06e_Medium-Arrow-regular_20x20.svg"
