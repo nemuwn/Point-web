@@ -17,7 +17,7 @@ const CardStyled = styled.div<{ opacity: number }>`
   background-color: transparent;
   color: white;
   flex-direction: column;
-  border-left: 1px solid white;
+  border-left: 1px solid ${(props) => (props.opacity ? "#fff" : "#222222")};
   padding: 2px 30px 9px;
   z-index: 1;
   opacity: ${(props) => props.opacity};
@@ -25,7 +25,7 @@ const CardStyled = styled.div<{ opacity: number }>`
     opacity: 1;
     cursor: pointer;
   }
-  transition: 1s;
+  transition: 0.3s;
   h2 {
     margin-bottom: 30px;
     font-size: 2.6875em;
@@ -53,6 +53,20 @@ const CardStyled = styled.div<{ opacity: number }>`
     display: flex;
     margin: 12px 0px 50px;
   }
+  @media (max-width: 899px) {
+    border-left: 0;
+    border-top: 1px solid ${(props) => (props.opacity ? "#fff" : "#222222")};
+    padding: 20px 10px 0 0;
+    h2 {
+      font-size: 22px;
+    }
+    #text {
+      display: none;
+    }
+    #learndiv {
+      display: none;
+    }
+  }
 `;
 export const Card = ({
   title,
@@ -66,7 +80,7 @@ export const Card = ({
   submit: () => void;
 }) => {
   return (
-    <CardStyled onClick={submit} opacity={opacity ? 1 : 0.5} data-aos="fade-up">
+    <CardStyled onClick={submit} opacity={opacity ? 1 : 0.5}>
       <h2>{title}</h2>
       <p id="text">{text}</p>
       <div id="learndiv">
