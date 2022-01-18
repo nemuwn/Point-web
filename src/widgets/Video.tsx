@@ -19,10 +19,10 @@ const HomeVideo = styled.div`
     min-height: 56.25vw;
 
     position: absolute;
-    left: 50%;
+    /* left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
 `;
 
 const MemberContainer = styled.div`
