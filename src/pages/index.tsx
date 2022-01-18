@@ -13,12 +13,14 @@ import { CardControl } from "@/widgets/CardControl";
 import { HeadsUp } from "@/widgets/HeadsUp";
 import { Membership } from "@/widgets/Membership";
 import { AllRew } from "@/widgets/AllRew";
+import { RewardDatas } from "@/utils/datas";
+
 const Home: NextPage = () => {
   return (
     <>
       <Video />
       <Cardinfo />
-      <Rewards />
+      <Rewards slides={RewardDatas} />
       <Access />
       <Page4 />
       <Page6 />
