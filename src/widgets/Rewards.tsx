@@ -41,12 +41,11 @@ const Slider = styled.div`
     left: 0px;
     display: block;
     width: 100%;
-    height: 100%;
+    height: 1024px;
     max-width: none;
   }
 
   .slide {
-    height: 1024px;
     transition-duration: 1s ease;
     opacity: 0;
   }
