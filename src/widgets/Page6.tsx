@@ -87,7 +87,7 @@ export const Page6 = () => {
               <h3>RUNWAY YELLOW</h3>
             </SubContain>
 
-            <CarouselImage img={active} />
+            <CarouselImage img={active ?? ""} />
           </div>
 
           <Description>

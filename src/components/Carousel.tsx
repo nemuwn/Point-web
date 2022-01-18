@@ -29,11 +29,11 @@ const ImageContainer = styled.div`
   max-width: 800px;
   justify-content: flex-start;
   vertical-align: middle;
-  transition: opacity 0.4s ease-out;
-  -webkit-transition: opacity 0.4s ease-out;
-  -moz-transition: opacity 0.4s ease-out;
-  -ms-transition: opacity 0.4s ease-out;
-  -o-transition: opacity 0.4s ease-out;
+  transition: opacity 0.2s ease-out;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -ms-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
   opacity: 0;
   opacity: 1;
   z-index: 9;
@@ -135,7 +135,7 @@ export const CarouselBtn2 = styled.div`
   }
 `;
 
-export const CarouselImage = ({ img, big }: { img: string; big: boolean }) => {
+export const CarouselImage = ({ img, big }: { img: string; big?: boolean }) => {
   return (
     <ImageContainer>
       <img
