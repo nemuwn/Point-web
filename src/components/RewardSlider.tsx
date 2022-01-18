@@ -42,6 +42,22 @@ const CardContentDesc = styled.div`
       margin-bottom: 10px;
     }
   }
+
+  @media (max-width: 899px) {
+    .subheading {
+      font-size: 0.937em;
+    }
+    h2 {
+      font-size: 2.5em;
+    }
+    .desc {
+      max-width: 300px;
+      p {
+        line-height: 1.187em;
+        font-size: 1em;
+      }
+    }
+  }
 `;
 
 const LearnMoreBtn = styled.div`
