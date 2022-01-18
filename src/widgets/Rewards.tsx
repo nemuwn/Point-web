@@ -3,21 +3,23 @@ import React, { Component, useState } from "react";
 import { RewardSlider } from "@/components/RewardSlider";
 import { RewardDatas } from "@/utils/datas";
 
-const Container = styled.div`
+const Layout = styled.div`
   position: relative;
-
   display: flex;
   overflow: hidden;
   width: 100%;
   height: 100%;
-
   flex-direction: row;
-
   justify-content: center;
-
   align-items: center;
   background-color: #f8f8f8;
   z-index: 1;
+
+  @media (max-width: 899px) {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
 `;
 
 const Slider = styled.div`
@@ -37,7 +39,6 @@ const Slider = styled.div`
     height: 1024px;
     max-width: none;
   }
-
   .slide {
     transition-duration: 1s ease;
     opacity: 0;
@@ -46,19 +47,25 @@ const Slider = styled.div`
     opacity: 1;
     transition-duration: 1s;
   }
+
+  @media (max-width: 899px) {
+    .tab-image {
+      object-position: 46% 50%;
+    }
+  }
 `;
 
 export const Bullet = styled.div`
-  border-color: rgba(0, 0, 0, 0.5);
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 100px;
-  cursor: pointer;
   display: flex;
-  width: 80px;
-  height: 80px;
   justify-content: center;
   margin-right: 10px;
+  width: 80px;
+  height: 80px;
+
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
 
   h3 {
     font-size: 1.5em;
@@ -74,11 +81,9 @@ export const Bullet = styled.div`
     transition: background-color 500ms ease;
   }
 
-  .dot.active {
-    background-color: #000;
-    h3 {
-      color: #ffffff;
-    }
+  @media (max-width: 899px) {
+    width: 60px;
+    height: 60px;
   }
 `;
 
@@ -86,7 +91,6 @@ export const CarouselBtn = styled.div`
   position: absolute;
   display: flex;
   flex-direction: row;
-  /* align-items: flex-start; */
   top: 800px;
   z-index: 20;
   width: 100%;
@@ -101,10 +105,8 @@ export const CarouselBtn = styled.div`
     .indicat {
       display: flex;
     }
-
     .arrows {
       display: flex;
-      margin-left: 10px;
     }
     .sArrow {
       border-color: #fff;
@@ -117,6 +119,24 @@ export const CarouselBtn = styled.div`
     }
     .arrLeft {
       transform: rotate(-180deg);
+    }
+  }
+
+  @media (max-width: 899px) {
+    .cBtns {
+      justify-content: center;
+    }
+    .indicat {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      align-items: center;
+    }
+    .sArrow {
+      display: none;
+    }
+    .cBtns.arrows {
+      display: none;
+      margin-left: 0;
     }
   }
 `;
@@ -136,8 +156,9 @@ export function Rewards({ slides }) {
   const moveDot = (index) => {
     setCurrent(index);
   };
+
   return (
-    <Container>
+    <Layout>
       <Slider>
         {RewardDatas.map((values, index) => {
           return (
@@ -167,12 +188,6 @@ export function Rewards({ slides }) {
                 <h3>{values.btn}</h3>
               </Bullet>
             ))}
-            {/* <Bullet>
-              <h3>3X</h3>
-            </Bullet>
-            <Bullet>
-              <h3>1X</h3>
-            </Bullet> */}
           </div>
           <div className="arrows" data-aos="fade-left">
             <Bullet className="sArrow arrLeft" onClick={prevSlide}>
@@ -190,6 +205,6 @@ export function Rewards({ slides }) {
           </div>
         </div>
       </CarouselBtn>
-    </Container>
+    </Layout>
   );
 }

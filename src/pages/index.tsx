@@ -21,9 +21,9 @@ const Home: NextPage = () => {
       <Video />
       <Cardinfo />
       <Rewards slides={RewardDatas} />
-      <Access />
+      {/* <Access /> */}
       <Page4 />
-      <Page6 />
+      {/*<Page6 />
       <Page8 />
       <HandInHand />
       <InstantFeed />
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       <CardControl />
       <HeadsUp />
       <AllRew />
-      <Membership />
+      <Membership /> */}
     </>
   );
 };
