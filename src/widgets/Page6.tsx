@@ -120,6 +120,7 @@ export const Page6 = () => {
                 submit={() => setActive(Page6Datas[index].img[values.id])}
                 id={values.id}
                 text={values.text}
+                key={values.id}
               />
             ))}
           </div>
@@ -132,6 +133,7 @@ export const Page6 = () => {
                     setbgColor(data.img);
                   }}
                   backColor={data.color}
+                  key={data.id}
                 />
               ))}
             </SwitchButtonContainer>

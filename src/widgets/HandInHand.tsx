@@ -107,6 +107,7 @@ export const HandInHand = () => {
                           setActive(HandInHandDatas[data.id].imgPath)
                         }
                         backColor={data.color}
+                        key={data.id}
                       />
                     ))}
                   </SwitchButtonContainer>

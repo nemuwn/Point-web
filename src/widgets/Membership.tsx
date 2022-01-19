@@ -60,7 +60,7 @@ export const Membership = () => {
       <CardContent3>
         <MemberCard text="MEMBERSHIP INCLUDES" />
         {Members.map((member) => (
-          <MemberCard text={member.text} />
+          <MemberCard text={member.text} key={member.text} />
         ))}
         <SubContainer>
           <div className="text">
