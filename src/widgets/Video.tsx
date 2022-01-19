@@ -116,7 +116,9 @@ const LearnMoreBtn = styled.a`
   }
   &:hover {
     background-color: transparent;
-
+    svg path {
+      fill: #000;
+    }
     .link-text {
       color: #000000;
     }
@@ -149,11 +151,20 @@ export function Video() {
             <Grid item xs={12} md={2}>
               <LearnMoreBtn href="/apply">
                 <p className="link-text">Apply</p>
-                <img
-                  src="https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/5ee8230aa2c66311cab3d242_copy.svg"
-                  alt="arrow"
-                  className="arrow-right-black"
-                />
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  className="svgimg"
+                >
+                  <path
+                    d="M214.783 343L216.071 341.614 213.443 338.964 220 338.964 220 337.036 213.443 337.036 216.071 334.386 214.783 333 210 338z"
+                    transform="matrix(-1 0 0 1 220 -333)"
+                    fill="#fff"
+                  />
+                </svg>
               </LearnMoreBtn>
             </Grid>
           </Grid>

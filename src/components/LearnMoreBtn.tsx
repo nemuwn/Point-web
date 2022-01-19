@@ -46,6 +46,9 @@ const LearnMoreBtn = styled.div<{
     .link-text {
       color: #000;
     }
+    svg path {
+      fill: #000;
+    }
   }
 `;
 
@@ -68,11 +71,20 @@ export const ApplyButton = ({
     >
       <a href="#Benefits" className="learn-more">
         <p className="link-text">{text}</p>
-        <img
-          src="https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/5ee8230aa2c66311cab3d242_copy.svg"
-          alt=""
-          className="arrow-right-black"
-        />
+        <svg
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          width="10"
+          height="10"
+          viewBox="0 0 10 10"
+          className="svgimg"
+        >
+          <path
+            d="M214.783 343L216.071 341.614 213.443 338.964 220 338.964 220 337.036 213.443 337.036 216.071 334.386 214.783 333 210 338z"
+            transform="matrix(-1 0 0 1 220 -333)"
+            fill="#fff"
+          />
+        </svg>
       </a>
     </LearnMoreBtn>
   );

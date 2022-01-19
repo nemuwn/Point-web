@@ -84,7 +84,7 @@ const ApplyWidget = () => {
             <Grid item md={12}>
               <Radio>
                 <label>
-                  <input type="radio"></input>
+                  <input type="radio" name="machine"></input>
                   <h3>Si Plus</h3>
                 </label>
                 <ShowMoreText
@@ -126,7 +126,7 @@ const ApplyWidget = () => {
             <Grid item md={12}>
               <Radio>
                 <label>
-                  <input type="radio"></input>
+                  <input type="radio" name="machine"></input>
                   <h3>Si Pro</h3>
                 </label>
                 <ShowMoreText

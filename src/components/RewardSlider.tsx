@@ -100,9 +100,9 @@ const LearnMoreBtn = styled.div`
     .link-text {
       color: #ffffff;
     }
-    svg {
+    svg path {
       color: #ffffff;
-      fill: currentColor;
+      fill: #fff;
     }
   }
 `;
@@ -128,11 +128,22 @@ export const RewardSlider = ({
           <LearnMoreBtn>
             <a href="#Benefits" className="learn-more">
               <p className="link-text">See all the benefits</p>
-              <img src="arrow.svg" alt="" className="arrow-right-black" />
+              <svg
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                className="arrow-right-black"
+              >
+                <path
+                  d="M214.783 343L216.071 341.614 213.443 338.964 220 338.964 220 337.036 213.443 337.036 216.071 334.386 214.783 333 210 338z"
+                  transform="matrix(-1 0 0 1 220 -333)"
+                  fill="#000"
+                />
+              </svg>
             </a>
           </LearnMoreBtn>
-
-         
         </CardContentDesc>
       </CardContent2>
       <img src={img} height="" alt="A woman" className="tab-image" />
