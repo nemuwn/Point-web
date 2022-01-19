@@ -1,15 +1,46 @@
-import { Container2 } from "@/components/Container";
-import { CardContent2 } from "@/components/CardContent";
 import type { NextPage } from "next";
 import { ApplyTopContainer } from "@/components/Container";
-import { Grid } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import { ApplyCard } from "@/components/Card";
-import ApplyWidget from "@/widgets/apply";
+import styled from "styled-components";
+import ApplyWidget from "@/widgets/apply/index";
+
+const Layout = styled.div`
+  position: relative;
+
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+
+  flex-direction: row;
+  justify-content: center;
+
+  align-items: center;
+  background-color: #e5e5e5;
+  z-index: 1;
+`;
+
+const RightContent = styled.div`
+  padding-top: 140px;
+  padding-bottom: 100px;
+  padding-left: 5vw;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+`;
+
+const Text = styled.div`
+  padding-right: 50px;
+`;
+
 const Apply: NextPage = () => {
   return (
-    <Container2 bgColor="#e5e5e5">
-      <CardContent2>
-        <Grid container spacing={3}>
+    <Layout>
+      <Container>
+        <Grid container>
           <Grid item md={6} sm={12}>
             <ApplyTopContainer>
               <div className="text">
@@ -21,40 +52,46 @@ const Apply: NextPage = () => {
                   alt=""
                 />
               </div>
-              <Grid container spacing={3}>
-                <Grid item md={6} xs={12}>
-                  <ApplyCard>
-                    <p>
-                      Here it is. The most modern payment card in the history of
-                      the world, the first of its kind. PointCard™ Titan is
-                      designed to balance style and performance. With an
-                      unparalleled form factor, its underlying technology is
-                      built to align incentives for card and cardholder alike —
-                      the way your card should be.
-                    </p>
-                  </ApplyCard>
+              <Text>
+                <Grid container spacing={3}>
+                  <Grid item md={6} xs={12}>
+                    <ApplyCard>
+                      <p>
+                        Here it is. The most modern payment card in the history
+                        of the world, the first of its kind. PointCard™ Titan is
+                        designed to balance style and performance. With an
+                        unparalleled form factor, its underlying technology is
+                        built to align incentives for card and cardholder alike
+                        — the way your card should be.
+                      </p>
+                    </ApplyCard>
+                  </Grid>
+                  <Grid item md={6} xs={12}>
+                    <ApplyCard>
+                      <p>
+                        The world is at your fingertips, with rewards configured
+                        by you, no arbitrary limits or interest, unlimited
+                        custom cards for your privacy, complete control over
+                        your spending, and benefits that keep up with you. This
+                        is not an arrival. It's only the beginning. The next
+                        generation of payments for the new economy, starting
+                        with you.
+                      </p>
+                    </ApplyCard>
+                  </Grid>
                 </Grid>
-                <Grid item md={6} xs={12}>
-                  <ApplyCard>
-                    <p>
-                      The world is at your fingertips, with rewards configured
-                      by you, no arbitrary limits or interest, unlimited custom
-                      cards for your privacy, complete control over your
-                      spending, and benefits that keep up with you. This is not
-                      an arrival. It's only the beginning. The next generation
-                      of payments for the new economy, starting with you.
-                    </p>
-                  </ApplyCard>
-                </Grid>
-              </Grid>
+              </Text>
             </ApplyTopContainer>
           </Grid>
-          <Grid item md={6} sm={12}>
-            <ApplyWidget />
+          <Grid item md={6} sm={12} bgcolor="#fff">
+            <RightContent>
+              <h2>Захиалга</h2>
+              <ApplyWidget />
+            </RightContent>
           </Grid>
         </Grid>
-      </CardContent2>
-    </Container2>
+      </Container>
+    </Layout>
   );
 };
 export default Apply;

@@ -134,6 +134,8 @@ export const FixedContainer = styled.div`
 export const ApplyTopContainer = styled.div`
   justify-items: left;
   justify-content: flex-start;
+  padding-top: 140px;
+  padding-bottom: 100px;
   .text {
     display: flex;
     h1 {
