@@ -8,19 +8,35 @@ const ApplyWidget = () => {
       <form>
         <label>
           <input type="radio"></input>
-          <h3>Si Plus</h3>
-          <label>
-            Pay for your new Mac over 12 months at 0% APR with Apple Card.* Just
-            choose Apple Card Monthly Installments when you check out to apply.
-          </label>
-          <p>OS</p>
-          <label>Android 7.1 Android 7.1 Sunmi OS</label>
-          <p>CPU</p>
-          <label>Quad-core 1.4Hz CPU</label>
-          <p>Memory</p>
-          <label>1GB RAM + 8GB ROM 2GB+16GB ROM (optional)</label>
-          <p>Display</p>
-          <label>5.99" HD+ 1440x720 IPS</label>
+          <ShowMoreText
+            /* Default options */
+            lines={3}
+            more="Show more"
+            less="Show less"
+            className="content-css"
+            anchorClass="my-anchor-css-class"
+            onClick={() => {
+              console.log("expanded");
+            }}
+            expanded={false}
+            width={280}
+            truncatedEndingComponent={"... "}
+          >
+            <h3>Si Plus</h3>{" "}
+            <label>
+              Pay for your new Mac over 12 months at 0% APR with Apple Card.*
+              Just choose Apple Card Monthly Installments when you check out to
+              apply.
+            </label>
+            <p>OS</p>
+            <label>Android 7.1 Android 7.1 Sunmi OS</label>
+            <p>CPU</p>
+            <label>Quad-core 1.4Hz CPU</label>
+            <p>Memory</p>
+            <label>1GB RAM + 8GB ROM 2GB+16GB ROM (optional)</label>
+            <p>Display</p>
+            <label>5.99" HD+ 1440x720 IPS</label>
+          </ShowMoreText>
         </label>
 
         <label>
