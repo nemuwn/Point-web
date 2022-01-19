@@ -171,6 +171,7 @@ export function Rewards({ slides }: { slides: any }) {
                   title={values.title}
                   description={values.description}
                   img={values.img}
+                  key={index}
                 />
               )}
             </div>
@@ -183,6 +184,7 @@ export function Rewards({ slides }: { slides: any }) {
             {RewardDatas.map((values, index) => (
               <Bullet
                 onClick={() => moveDot(index)}
+                key={index}
                 className={current === index + 1 ? "dot active" : "dot"}
               >
                 <h3>{values.btn}</h3>

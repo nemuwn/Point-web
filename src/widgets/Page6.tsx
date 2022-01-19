@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { Page6Datas, PagButton, ColorSwitch } from "@/utils/datas";
 import { SwitchButton } from "@/components/Button";
 import { CarouselBtn2 } from "@/components/Carousel";
+import { Grid } from "@mui/material";
 const SubContain = styled.div`
   display: flex;
   padding-bottom: 100px;
@@ -26,6 +27,9 @@ const SubContain = styled.div`
     margin-right: 40px;
     margin-bottom: 10px;
     color: black;
+  }
+  @media (max-width: 899px) {
+    display: none;
   }
 `;
 const Description = styled.div`
@@ -53,16 +57,22 @@ const Description = styled.div`
     text-align: left;
     text-decoration: none;
   }
+  @media (max-width: 899px) {
+    padding-top: 0px;
+    width: 100%;
+    h2 {
+      font-size: 2.5em;
+    }
+    p {
+      width: auto;
+      line-height: 1.23em;
+    }
+  }
 `;
-const BtnContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  z-index: 2;
-  max-width: 1240px;
-  width: 85%;
-  justify-content: space-between;
-  .btncontainer2 {
-    display: flex;
+const MobileImage = styled.div`
+  display: none;
+  @media (max-width: 899px) {
+    display: block;
   }
 `;
 export const Page6 = () => {
@@ -78,55 +88,56 @@ export const Page6 = () => {
   }, [index]);
   return (
     <Container2 bgColor={bgColor}>
-      <ContainerSub2>
-        <CardContent>
-          <div className="headersection">
-            <SubContain>
-              <div className="editon">Editions</div>
-              <h3>N-1</h3>
-              <h3>RUNWAY YELLOW</h3>
-            </SubContain>
+      <CardContent>
+        <div className="headersection">
+          <SubContain>
+            <div className="editon">Editions</div>
+            <h3>N-1</h3>
+            <h3>RUNWAY YELLOW</h3>
+          </SubContain>
 
-            <CarouselImage img={active ?? ""} />
+          <CarouselImage img={active ?? ""} />
+        </div>
+
+        <Description>
+          <h2>Formed for function.</h2>
+          <p>
+            Designed for function first. Obsessive attention to detail from
+            conception to production results in an object that is future-forward
+            and distinctive.
+          </p>
+        </Description>
+        <MobileImage>
+          <CarouselImage img={active ?? ""} />
+        </MobileImage>
+      </CardContent>
+
+      <CarouselBtn2 data-aos="fade-up">
+        <div className="cBtns">
+          <div className="indicat">
+            {PagButton.map((values) => (
+              <Btn
+                submit={() => setActive(Page6Datas[index].img[values.id])}
+                id={values.id}
+                text={values.text}
+              />
+            ))}
           </div>
-
-          <Description>
-            <h2>Formed for function.</h2>
-            <p>
-              Designed for function first. Obsessive attention to detail from
-              conception to production results in an object that is
-              future-forward and distinctive.
-            </p>
-          </Description>
-        </CardContent>
-
-        <CarouselBtn2 data-aos="fade-up">
-          <div className="cBtns">
-            <div className="indicat">
-              {PagButton.map((values) => (
-                <Btn
-                  submit={() => setActive(Page6Datas[index].img[values.id])}
-                  id={values.id}
-                  text={values.text}
+          <div className="arrows">
+            <SwitchButtonContainer>
+              {ColorSwitch.map((data) => (
+                <SwitchButton
+                  onClick={() => {
+                    setIndex(data.id);
+                    setbgColor(data.img);
+                  }}
+                  backColor={data.color}
                 />
               ))}
-            </div>
-            <div className="arrows">
-              <SwitchButtonContainer>
-                {ColorSwitch.map((data) => (
-                  <SwitchButton
-                    onClick={() => {
-                      setIndex(data.id);
-                      setbgColor(data.img);
-                    }}
-                    backColor={data.color}
-                  />
-                ))}
-              </SwitchButtonContainer>
-            </div>
+            </SwitchButtonContainer>
           </div>
-        </CarouselBtn2>
-      </ContainerSub2>
+        </div>
+      </CarouselBtn2>
     </Container2>
   );
 };

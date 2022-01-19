@@ -99,7 +99,7 @@ export const Footer = () => {
               Waves
             </div>
           </Grid>
-          <Grid xs={12} md={12}>
+          <Grid item xs={12} md={12}>
             <span>
               1. 5x points on subscriptions is applicable for the following
               services: Netflix, Hulu, HBO Max, YouTube Premium, Spotify,

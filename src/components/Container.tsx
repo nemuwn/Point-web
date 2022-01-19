@@ -8,11 +8,7 @@ export const Container = styled.div`
   width: 100%;
   height: 1024px;
   padding-top: 100px;
-
   flex-direction: row;
-  @media (max-width: 900px) {
-    width: 100vh;
-  }
   justify-content: center;
 
   align-items: center;
@@ -37,6 +33,12 @@ export const Container2 = styled.div<{ bgColor: string }>`
   background-repeat: no-repeat, repeat;
   text-align: center;
   z-index: 1;
+  @media (max-width: 899px) {
+    width: 100%;
+    padding-top: 0;
+    flex-direction: row;
+    background-size: cover;
+  }
 `;
 
 export const Container3 = styled.div`
@@ -116,9 +118,7 @@ export const SwitchButtonContainer = styled.div`
   padding: 17.68px;
   justify-content: center;
 `;
-export const ContainerSub2 = styled.div`
-  display: flex;
-`;
+export const ContainerSub2 = styled.div``;
 
 export const FixedContainer = styled.div`
   position: fixed;

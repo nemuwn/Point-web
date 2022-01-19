@@ -61,7 +61,7 @@ export const Cardinfo = () => {
             <SubHeader>Designed in Tandem</SubHeader>
             <Grid container>
               {cardDatas.map((values) => (
-                <Grid item xs={6} md={12} data-aos="fade-up">
+                <Grid item xs={6} md={12} data-aos="fade-up" key={values.id}>
                   <Card
                     title={values.title}
                     text={values.description}
@@ -80,7 +80,7 @@ export const Cardinfo = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={5} overflow="hidden">
             <CarouselImage src={active} />
           </Grid>
           <Grid item xs={12}>
