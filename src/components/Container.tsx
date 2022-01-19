@@ -170,4 +170,7 @@ export const ContainerPh = styled.div`
   align-items: center;
   background-color: #000;
   z-index: 1;
+  @media (max-width: 899px) {
+    height: none;
+  }
 `;
