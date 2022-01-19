@@ -1,25 +1,16 @@
+import { Container } from "@mui/material";
 import styled from "styled-components";
 
-const Container = styled.div`
+const Layout = styled.div`
   position: relative;
-
   display: flex;
   overflow: hidden;
   width: 100%;
   height: 1024px;
-
   flex-direction: row;
   align-items: center;
   background-color: #e3e3e3;
   z-index: 1;
-`;
-
-const CardSection = styled.div`
-  overflow: hidden;
-  width: 60%;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
 `;
 
 const CardCont = styled.div`
@@ -61,28 +52,48 @@ const CardCont = styled.div`
       text-decoration: none;
     }
   }
+
+  @media (max-width: 899px) {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    h3 {
+      font-size: 0.937em;
+    }
+    h2 {
+      font-size: 3.5em;
+      line-height: 1.1865em;
+    }
+    .desc {
+      width: auto;
+
+      p {
+        margin-bottom: 0px;
+        font-size: 1em;
+        line-height: 1.187em;
+      }
+    }
+  }
 `;
 
 export function AllRew() {
   return (
-    <Container>
-      <CardSection>
-        <div>
-          <CardCont>
-            <h3>MEMBERSHIP</h3>
-            <h2>
-              All rewards. <br />
-              <span>All benefits.</span>
-            </h2>
-            <div className="desc">
-              <p>
-                Point membership pays for itself and then some. See the benefits
-                you receive when you join.
-              </p>
-            </div>
-          </CardCont>
-        </div>
-      </CardSection>
-    </Container>
+    <Layout>
+      <Container>
+        <CardCont>
+          <h3>MEMBERSHIP</h3>
+          <h2>
+            All rewards. <br />
+            <span>All benefits.</span>
+          </h2>
+          <div className="desc">
+            <p>
+              Point membership pays for itself and then some. See the benefits
+              you receive when you join.
+            </p>
+          </div>
+        </CardCont>
+      </Container>
+    </Layout>
   );
 }
