@@ -14,9 +14,7 @@ export const CardContent = styled.div`
   max-width: 1200px;
   margin: auto;
   padding-top: 100px;
-  @media only screen and (max-width: 900px) {
-    width: 100%;
-  }
+
   .subcontain {
     display: flex;
     .switch {
@@ -27,6 +25,16 @@ export const CardContent = styled.div`
   }
   .headersection {
     margin-bottom: 100px;
+  }
+  @media only screen and (max-width: 899px) {
+    width: 85%;
+    justify-content: none;
+    height: auto;
+    flex: none;
+    flex-direction: column;
+    .headersection {
+      display: none;
+    }
   }
 `;
 export const CardContent2 = styled.div`

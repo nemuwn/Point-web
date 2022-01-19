@@ -2,9 +2,10 @@ import styled from "styled-components";
 const AccesDatas = styled.div`
   color: white;
   display: flex;
+  width: 100%;
   .subAccess {
     display: flex;
-    width: 40vw;
+    width: 100%;
     height: 60px;
     padding-top: 15px;
     padding-bottom: 15px;

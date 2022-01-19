@@ -4,9 +4,10 @@ import type { NextPage } from "next";
 import { ApplyTopContainer } from "@/components/Container";
 import { Grid } from "@mui/material";
 import { ApplyCard } from "@/components/Card";
+import ApplyWidget from "@/widgets/apply";
 const Apply: NextPage = () => {
   return (
-    <Container2 bgColor="#fff">
+    <Container2 bgColor="#e5e5e5">
       <CardContent2>
         <Grid container spacing={3}>
           <Grid item md={6} sm={12}>
@@ -49,7 +50,7 @@ const Apply: NextPage = () => {
             </ApplyTopContainer>
           </Grid>
           <Grid item md={6} sm={12}>
-            <h1>lol</h1>
+            <ApplyWidget />
           </Grid>
         </Grid>
       </CardContent2>

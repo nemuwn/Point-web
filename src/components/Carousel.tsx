@@ -30,12 +30,6 @@ const ImageContainer = styled.div`
   justify-content: flex-start;
   vertical-align: middle;
   transition: opacity 0.2s ease-out;
-  -webkit-transition: opacity 0.2s ease-out;
-  -moz-transition: opacity 0.2s ease-out;
-  -ms-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
-  opacity: 0;
-  opacity: 1;
   z-index: 9;
   @-webkit-keyframes fade {
     0% {
@@ -97,6 +91,11 @@ const ImageContainer = styled.div`
     background-color: transparent;
     transition: all 3s ease-in-out;
   }
+  @media (max-width: 899px) {
+    img {
+      object-position: 50px 0px;
+    }
+  }
 `;
 export const CarouselBtn2 = styled.div`
   position: absolute;
@@ -131,6 +130,25 @@ export const CarouselBtn2 = styled.div`
       border-color: #fff;
       background-color: rgba(0, 0, 0, 0.4);
       opacity: 1;
+    }
+  }
+  @media (max-width: 899px) {
+    flex-direction: column;
+    justify-content: center;
+    top: 600px;
+    .cBtns {
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      left: 0;
+      right: 0;
+      .arrows {
+        object-position: 50px 0;
+      }
+      .indicat {
+        justify-content: center;
+      }
     }
   }
 `;

@@ -1,8 +1,9 @@
 import { CardContent } from "@/components/CardContent";
 import { ContainerPh } from "@/components/Container";
-import { Phone1 } from "@/components/Logo";
-import styled from "styled-components";
 
+import styled from "styled-components";
+import { Grid } from "@mui/material";
+import { Container } from "@mui/material";
 const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -61,15 +62,15 @@ const SubContainer = styled.div`
     line-height: 1.185em;
     font-weight: 500;
   }
-  
+
   @media (max-width: 899px) {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    h3 {  
+    h3 {
       font-size: 0.937em;
     }
-    h2{
+    h2 {
       font-size: 2.5em;
     }
   }
@@ -103,27 +104,31 @@ export const PhonePage = ({
   return (
     <ContainerPh>
       <CardContent>
-        <SubContainer>
-          <div>
-            <h3>{title}</h3>
-          </div>
-          <div>
-            <h2>{header}</h2>
-          </div>
-          <div className="kkk">
-            <div className="imgg" data-aos="fade-up">
-              {<Img />}
-              <div className="video">
-                <video autoPlay loop muted playsInline>
-                  <source src={Video} />
-                </video>
+        <Grid container>
+          <Grid item xs={12} md={6}>
+            <div>
+              <h3>{title}</h3>
+            </div>
+            <div>
+              <h2>{header}</h2>
+            </div>
+            <div className="kkk">
+              <div className="imgg" data-aos="fade-up">
+                {<Img />}
+                <div className="video">
+                  <video autoPlay loop muted playsInline>
+                    <source src={Video} />
+                  </video>
+                </div>
               </div>
             </div>
-          </div>
-        </SubContainer>
-        <LeftContainer>
-          <p>{Description}</p>
-        </LeftContainer>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <LeftContainer>
+              <p>{Description}</p>
+            </LeftContainer>
+          </Grid>
+        </Grid>
       </CardContent>
     </ContainerPh>
   );

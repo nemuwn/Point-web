@@ -142,7 +142,7 @@ export const CarouselBtn = styled.div`
   }
 `;
 
-export function Rewards({ slides }) {
+export function Rewards({ slides }: { slides: any }) {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -154,7 +154,7 @@ export function Rewards({ slides }) {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  const moveDot = (index) => {
+  const moveDot = (index: number) => {
     setCurrent(index);
   };
 
@@ -172,6 +172,7 @@ export function Rewards({ slides }) {
                   title={values.title}
                   description={values.description}
                   img={values.img}
+                  key={index}
                 />
               )}
             </div>
@@ -184,6 +185,7 @@ export function Rewards({ slides }) {
             {RewardDatas.map((values, index) => (
               <Bullet
                 onClick={() => moveDot(index)}
+                key={index}
                 className={current === index + 1 ? "dot active" : "dot"}
               >
                 <h3>{values.btn}</h3>

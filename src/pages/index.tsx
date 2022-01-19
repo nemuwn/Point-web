@@ -21,16 +21,16 @@ const Home: NextPage = () => {
       <Video />
       <Cardinfo />
       <Rewards slides={RewardDatas} />
-      {/* <Access /> */}
+      <Access />
       <Page4 />
-      {/* <Page6 /> */}
+      <Page6 />
       <Page8 />
       <HandInHand />
-      {/* <InstantFeed />
+      <InstantFeed />
       <Virtual />
       <CardControl />
-     <HeadsUp />
-      <AllRew /> */}
+      <HeadsUp />
+      <AllRew />
       <Membership />
     </>
   );
