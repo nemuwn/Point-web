@@ -40,6 +40,15 @@ const SubContainer = styled.div`
       color: black;
     }
   }
+
+  @media (max-width: 899px) {
+    .text2 h3 {
+      font-size: 2.375em;
+    }
+    .text h2 {
+      font-size: 1.3125em;
+    }
+  }
 `;
 
 const SignUpContainer = styled.div`
@@ -49,17 +58,14 @@ export const Membership = () => {
   return (
     <Container7>
       <CardContent3>
-        <MemberCard
-          text="
-MEMBERSHIP INCLUDES"
-        />
+        <MemberCard text="MEMBERSHIP INCLUDES" />
         {Members.map((member) => (
           <MemberCard text={member.text} />
         ))}
         <SubContainer>
           <div className="text">
             <h2>Total Estimated</h2>
-            <a href="#asdsad">
+            <a href="#asdsad" className="dekstop_btn">
               <p>See the breakdown</p>
               <img
                 src="https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/5ee82addb7adad653c120ee6_invalid-name.svg"

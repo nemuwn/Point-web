@@ -95,7 +95,7 @@ export const Container7 = styled.div`
   z-index: 99;
 `;
 
-export const Container8 = styled.div`
+export const Layout8 = styled.div`
   position: relative;
 
   display: flex;

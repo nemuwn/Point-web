@@ -18,6 +18,13 @@ const Card = styled.div`
     vertical-align: middle;
     display: inline-block;
   }
+  @media (max-width: 899px) {
+    h3 {
+      color: #000;
+      font-size: 1.3125em;
+      line-height: 1.1905em;
+    }
+  }
 `;
 export const MemberCard = ({ text }: { text: string }) => {
   return (

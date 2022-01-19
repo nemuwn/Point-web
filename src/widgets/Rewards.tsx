@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React, { Component, useState } from "react";
 import { RewardSlider } from "@/components/RewardSlider";
 import { RewardDatas } from "@/utils/datas";
+import { Container, Grid } from "@mui/material";
 
 const Layout = styled.div`
   position: relative;

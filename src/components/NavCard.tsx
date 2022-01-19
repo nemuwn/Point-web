@@ -16,6 +16,12 @@ const NavLink = styled.a<{ opacity: number }>`
     cursor: pointer;
   }
   transition: 1s;
+
+  @media (max-width: 899px) {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.125rem;
+    }
 `;
 
 const NavHeading = styled.div`
@@ -25,13 +31,18 @@ const NavHeading = styled.div`
 
   h3 {
     margin-bottom: 10px;
-    font-family: SequelSans-SemiBoldBody, sans-serif;
     color: #000;
     font-size: 1.5em;
     line-height: 1.208em;
     max-width: 10ch;
     font-family: "Sequel Sans (Display)", sans-serif;
     font-weight: 600;
+  }
+  @media (max-width: 899px) {
+    width: 100%;
+     h3 {
+         max-width: 20ch;
+     }
   }
 `;
 
@@ -45,6 +56,12 @@ const NavDesc = styled.div`
   font-weight: 400;
   text-decoration: none;
   color: #000;
+
+  @media (max-width: 899px) {
+    display: none;
+    width: 100%;
+     max-width: 40ch;
+  }
 `;
 
 export const NavCard = ({
