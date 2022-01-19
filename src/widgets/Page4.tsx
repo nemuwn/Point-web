@@ -18,17 +18,17 @@ const LeftContent = styled.div`
   @media (max-width: 899px) {
     padding-right: 0;
     justify-content: center;
-     width: 100%;
+    width: 100%;
   }
 `;
 
 const RightContent = styled.div`
-    position: absolute;
-    left: auto;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    width: 45%;
+  position: absolute;
+  left: auto;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 45%;
 
   img {
     width: 100%;
@@ -38,13 +38,11 @@ const RightContent = styled.div`
     object-fit: cover;
   }
   @media (max-width: 899px) {
-    
     position: static;
     overflow: hidden;
     width: 100%;
     height: 500px;
- }
-
+  }
 `;
 
 const CarouselImage = styled.div<{ url: string }>`
@@ -84,54 +82,53 @@ const Title = styled.div`
     color: #000;
   }
 
-   @media (max-width: 899px) {
-   padding-top: 50px;
-   padding-bottom: 20px;
-   .subheading{
-     font-size: 0.937em;
-   }
-   .heading {
-      font-size: 2.5em;
-   }
-   }
-`;
-
-
-const BenefBtn = styled.a`
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 20px;
-
-    text-decoration: none;
-    cursor: pointer;
-    width: 240px;
-    height: 60px;
-
-    margin-right: 0px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-    align-items: center;
-    border-color: rgba(0, 0, 0, 0.65);
-    border: 1px solid #000;
-    border-radius: 10px;
-    background-color: transparent;
-
-    transition: border-color 500ms ease, background-color 500ms ease,
-      filter 500ms ease;
-    .link-text {
-      margin-top: 8px;
-      margin-bottom: 8px;
-      color: #000;
-      font-size: 0.75em;
-      line-height: 1.166em;
-      font-weight: 600;
-      text-transform: uppercase;
+  @media (max-width: 899px) {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    .subheading {
+      font-size: 0.937em;
     }
-    .arrow-right-black {
-      margin-left: 41px;
-      padding-top: 0.5px;
+    .heading {
+      font-size: 2.5em;
     }
   }
+`;
+
+const BenefBtn = styled.a`
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+
+  text-decoration: none;
+  cursor: pointer;
+  width: 240px;
+  height: 60px;
+
+  margin-right: 0px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  align-items: center;
+  border-color: rgba(0, 0, 0, 0.65);
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: transparent;
+
+  transition: border-color 500ms ease, background-color 500ms ease,
+    filter 500ms ease;
+  .link-text {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #000;
+    font-size: 0.75em;
+    line-height: 1.166em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .arrow-right-black {
+    margin-left: 41px;
+    padding-top: 0.5px;
+  }
+
   &:hover {
     background-color: #000;
     .link-text {
@@ -142,7 +139,6 @@ const BenefBtn = styled.a`
       fill: currentColor;
     }
   }
-
 `;
 
 export function Page4() {
@@ -155,21 +151,22 @@ export function Page4() {
             <div className="subheading">BENEFITS</div>
             <h2 className="heading">Peace of mind included.</h2>
           </Title>
-            {Page4Datas.map((values) => (
-              <NavCard
-                title={values.title}
-                desc={values.desc}
-                submit={() => setActive(values.img)}
-                opacity={values ? true : false}
-              />
-            ))}
+          {Page4Datas.map((values) => (
+            <NavCard
+              title={values.title}
+              desc={values.desc}
+              submit={() => setActive(values.img)}
+              opacity={values ? true : false}
+              key={values.id}
+            />
+          ))}
           <BenefBtn>
-              <p className="link-text">SEE ALL BENEFITS</p>
-              <img src="arrow.svg" alt="" className="arrow-right-black" />
+            <p className="link-text">SEE ALL BENEFITS</p>
+            <img src="arrow.svg" alt="" className="arrow-right-black" />
           </BenefBtn>
         </LeftContent>
         <RightContent>
-          <img src={active}/>
+          <img src={active} />
         </RightContent>
       </Container>
     </Layout8>

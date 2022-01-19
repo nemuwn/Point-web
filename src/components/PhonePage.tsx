@@ -4,11 +4,7 @@ import { ContainerPh } from "@/components/Container";
 import styled from "styled-components";
 import { Grid } from "@mui/material";
 import { Container } from "@mui/material";
-const SubContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-bottom: 100px;
+const TextContainer = styled.div`
   .kkk {
     display: flex;
     .imgg {
@@ -62,11 +58,18 @@ const SubContainer = styled.div`
     line-height: 1.185em;
     font-weight: 500;
   }
-
   @media (max-width: 899px) {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    .kkk {
+      .imgg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .video {
+        width: 100%;
+        height: 100%;
+      }
+    }
     h3 {
       font-size: 0.937em;
     }
@@ -78,7 +81,6 @@ const SubContainer = styled.div`
 const LeftContainer = styled.div`
   display: flex;
   align-items: center;
-
   p {
     max-width: 530px;
     color: white;
@@ -86,6 +88,13 @@ const LeftContainer = styled.div`
     line-height: 1.15em;
     font-weight: 400;
     margin-bottom: 10px;
+  }
+  @media (max-width: 899px) {
+    width: 100%;
+    padding: 50px 0px;
+    p {
+      font-size: 1.125em;
+    }
   }
 `;
 export const PhonePage = ({
@@ -106,24 +115,27 @@ export const PhonePage = ({
       <CardContent>
         <Grid container>
           <Grid item xs={12} md={6}>
-            <div>
-              <h3>{title}</h3>
-            </div>
-            <div>
-              <h2>{header}</h2>
-            </div>
-            <div className="kkk">
-              <div className="imgg" data-aos="fade-up">
-                {<Img />}
-                <div className="video">
-                  <video autoPlay loop muted playsInline>
-                    <source src={Video} />
-                  </video>
+            <TextContainer>
+              <div>
+                <h3>{title}</h3>
+              </div>
+              <div>
+                <h2>{header}</h2>
+              </div>
+
+              <div className="kkk">
+                <div className="imgg" data-aos="fade-up">
+                  {<Img />}
+                  <div className="video">
+                    <video autoPlay loop muted playsInline>
+                      <source src={Video} />
+                    </video>
+                  </div>
                 </div>
               </div>
-            </div>
+            </TextContainer>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} alignSelf="center">
             <LeftContainer>
               <p>{Description}</p>
             </LeftContainer>
