@@ -36,6 +36,17 @@ const Text = styled.div`
   padding-right: 50px;
 `;
 
+const InnerBG = styled.div`
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 20%;
+  height: 100%;
+  margin-left: auto;
+  background-color: #fff;
+`;
+
 const Apply: NextPage = () => {
   return (
     <Layout>
@@ -91,6 +102,7 @@ const Apply: NextPage = () => {
           </Grid>
         </Grid>
       </Container>
+      <InnerBG />
     </Layout>
   );
 };

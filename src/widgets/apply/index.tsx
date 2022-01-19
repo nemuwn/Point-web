@@ -1,81 +1,280 @@
 import React, { useState } from "react";
 import { Grid } from "@mui/material";
 import ShowMoreText from "react-show-more-text";
+import styled from "styled-components";
+
+const FormRow = styled.div``;
+
+const Radio = styled.div`
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  input {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    bottom: -4px;
+    margin-left: 0px;
+    margin-right: 14px;
+  }
+  .content p {
+    margin: 0px;
+    display: block;
+    text-align: start;
+    font-weight: 600;
+  }
+  .content label {
+    margin-bottom: 16px;
+    font-weight: 300;
+
+    line-height: 20px;
+  }
+  .content .desc {
+    width: 85%;
+  }
+  label {
+    display: flex;
+    margin-bottom: 10px;
+  }
+`;
+
+const FormSep = styled.div`
+  width: 80%;
+  height: 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+`;
+const InpForm = styled.div`
+  display: block;
+  input {
+    width: 80%;
+    height: 60px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 20px;
+  }
+  .inp {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+`;
 
 const ApplyWidget = () => {
   return (
     <>
       <form>
-        <label>
-          <input type="radio"></input>
-          <ShowMoreText
-            /* Default options */
-            lines={3}
-            more="Show more"
-            less="Show less"
-            className="content-css"
-            anchorClass="my-anchor-css-class"
-            onClick={() => {
-              console.log("expanded");
-            }}
-            expanded={false}
-            width={280}
-            truncatedEndingComponent={"... "}
+        <FormSep />
+        <FormRow>
+          <Grid
+            container
+            direction="column"
+            alignItems="flex-start"
+            spacing={3}
           >
-            <h3>Si Plus</h3>{" "}
-            <label>
-              Pay for your new Mac over 12 months at 0% APR with Apple Card.*
-              Just choose Apple Card Monthly Installments when you check out to
-              apply.
-            </label>
-            <p>OS</p>
-            <label>Android 7.1 Android 7.1 Sunmi OS</label>
-            <p>CPU</p>
-            <label>Quad-core 1.4Hz CPU</label>
-            <p>Memory</p>
-            <label>1GB RAM + 8GB ROM 2GB+16GB ROM (optional)</label>
-            <p>Display</p>
-            <label>5.99" HD+ 1440x720 IPS</label>
-          </ShowMoreText>
-        </label>
+            <Grid item md={12}>
+              <Radio>
+                <label>
+                  <input type="radio"></input>
+                  <h3>Si Plus</h3>
+                </label>
+                <ShowMoreText
+                  lines={3}
+                  more="Show more"
+                  less="Show less"
+                  className="content"
+                  onClick={() => {
+                    console.log("expanded");
+                  }}
+                  expanded={false}
+                  width={400}
+                  truncatedEndingComponent={"... "}
+                >
+                  <label className="desc">
+                    Pay for your new Mac over 12 months at 0% APR with Apple
+                    Card.* Just choose Apple Card Monthly Installments when you
+                    check out to apply.
+                  </label>
+                  <p>OS</p>
+                  <label>Android 7.1 Android 7.1 Sunmi OS</label>
+                  <p>CPU</p>
+                  <label>Quad-core 1.4Hz CPU</label>
+                  <p>Memory</p>
+                  <label>1GB RAM + 8GB ROM 2GB+16GB ROM (optional)</label>
+                  <p>Display</p>
+                  <label>5.99" HD+ 1440x720 IPS</label>
 
-        <label>
-          <input type="radio"></input>
-          <h3>Si Pro</h3>
-          <label>
-            Pay for your new Mac over 12 months at 0% APR with Apple Card.* Just
-            choose Apple Card Monthly Installments when you check out to apply.
-          </label>
-          <p>OS</p>
-          <label>Android 7.1 Android 7.1 Sunmi OS</label>
-          <p>CPU</p>
-          <label>Quad-core 1.4Hz CPU</label>
-          <p>Memory</p>
-          <label>1GB RAM + 8GB ROM 2GB+16GB ROM (optional)</label>
-          <p>Display</p>
-          <label>5.99" HD+ 1440x720 IPS</label>
-        </label>
-      </form>
-      <h2>Тохиргоо</h2>
-      <form>
-        <Grid container direction="column" alignItems="flex-start" spacing={3}>
-          <Grid item md={12}>
-            <input id="Golomt" type="radio" value="Golomt Bank" name="Bank" />
-            <label htmlFor="Golomt">Golomt Bank</label>
+                  <p>Camera</p>
+                  <label>5.0MP, Flash, AF support 1D/2D barcode scan</label>
+                  <p>Wi-Fi</p>
+                  <label>2.4G/5GHz 2.4G/5GHz, IEEE 802.11 a/b/g/n</label>
+                  <p>Bluetooth</p>
+                  <label>Bluetooth 2.1/3.0/4.2 Support BLE</label>
+                </ShowMoreText>
+              </Radio>
+            </Grid>
+
+            <Grid item md={12}>
+              <Radio>
+                <label>
+                  <input type="radio"></input>
+                  <h3>Si Pro</h3>
+                </label>
+                <ShowMoreText
+                  lines={3}
+                  more="Show more"
+                  less="Show less"
+                  className="content"
+                  onClick={() => {
+                    console.log("expanded");
+                  }}
+                  expanded={false}
+                  width={400}
+                  truncatedEndingComponent={"... "}
+                >
+                  <label className="desc">
+                    Pay for your new Mac over 12 months at 0% APR with Apple
+                    Card.* Just choose Apple Card Monthly Installments when you
+                    check out to apply.
+                  </label>
+                  <p>OS</p>
+                  <label>Android 7.1 Android 7.1 Sunmi OS</label>
+                  <p>CPU</p>
+                  <label>Quad-core 1.4Hz CPU</label>
+                  <p>Memory</p>
+                  <label>1GB RAM + 8GB ROM 2GB+16GB ROM (optional)</label>
+                  <p>Display</p>
+                  <label>5.99" HD+ 1440x720 IPS</label>
+
+                  <p>Camera</p>
+                  <label>5.0MP, Flash, AF support 1D/2D barcode scan</label>
+                  <p>Wi-Fi</p>
+                  <label>2.4G/5GHz 2.4G/5GHz, IEEE 802.11 a/b/g/n</label>
+                  <p>Bluetooth</p>
+                  <label>Bluetooth 2.1/3.0/4.2 Support BLE</label>
+                </ShowMoreText>
+              </Radio>
+            </Grid>
           </Grid>
-          <Grid item md={12}>
-            <input id="Khan" type="radio" value="Khan BANK" name="Bank" />
-            <label htmlFor="Khan">Khan Bank</label>
+        </FormRow>
+
+        <FormSep />
+
+        <h2>Тохиргоо</h2>
+        <p>Банкаа сонгон уу</p>
+        <Radio>
+          <Grid
+            container
+            direction="column"
+            alignItems="flex-start"
+            spacing={3}
+          >
+            <Grid item md={12}>
+              <label htmlFor="Golomt">
+                <input
+                  id="Golomt"
+                  type="radio"
+                  value="Golomt Bank"
+                  name="Bank"
+                />
+                Golomt Bank
+              </label>
+            </Grid>
+            <Grid item md={12}>
+              <label htmlFor="Khan">
+                <input id="Khan" type="radio" value="Khan BANK" name="Bank" />
+                Khan Bank
+              </label>
+            </Grid>
+            <Grid item md={12}>
+              <label htmlFor="TDB">
+                <input id="TDB" type="radio" value="TDB" name="Bank" />
+                TDB
+              </label>
+            </Grid>
+            <Grid item md={12}>
+              <label htmlFor="Tur">
+                <input id="Tur" type="radio" value="Turiin Bank" name="Bank" />
+                Turiin Bank
+              </label>
+            </Grid>
           </Grid>
-          <Grid item md={12}>
-            <input id="TDB" type="radio" value="TDB" name="Bank" />
-            <label htmlFor="TDB">TDB</label>
+        </Radio>
+        <FormSep />
+        <p>Финтекүүдээ сонгон уу</p>
+        <Radio>
+          <Grid
+            container
+            direction="column"
+            alignItems="flex-start"
+            spacing={3}
+          >
+            <Grid item md={12}>
+              <label htmlFor="">
+                <input type="radio" />
+                Qpay
+              </label>
+            </Grid>
+            <Grid item md={12}>
+              <label htmlFor="">
+                <input type="radio" />
+                Social Pay
+              </label>
+            </Grid>
+            <Grid item md={12}>
+              <label htmlFor="">
+                <input type="radio" />
+                SuperUp
+              </label>
+            </Grid>
+            <Grid item md={12}>
+              <label htmlFor="">
+                <input type="radio" />
+                Mongol chat
+              </label>
+            </Grid>
           </Grid>
-          <Grid item md={12}>
-            <input id="Tur" type="radio" value="Turiin Bank" name="Bank" />
-            <label htmlFor="Tur">Turiin Bank</label>
-          </Grid>
-        </Grid>
+        </Radio>
+        <FormSep />
+        <InpForm>
+          <div className="inp">
+            <label>Name</label>
+            <input
+              placeholder="Өөрийн нэрээ бичнэ үү"
+              id="name"
+              className="sc-1kmc4e5-5 iekNQU"
+            />
+          </div>
+          <div className="inp">
+            <label>Email</label>
+            <input type="email" placeholder="email@point.app" />
+          </div>
+          <div className="inp">
+            <label>Phone Number</label>
+            <input
+              type="number"
+              placeholder="Өөрийн дугаараа бичнэ үү"
+              id="phone"
+            />
+          </div>
+          <div className="inp">
+            <label>Захиалах тоо ширхэг</label>
+            <input
+              type="number"
+              placeholder="Захаилах тоо ширхэгээ бичнэ үү"
+              id="number"
+            />
+          </div>
+        </InpForm>
       </form>
     </>
   );
