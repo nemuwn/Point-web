@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Container8 } from "@/components/Container";
+import { Layout8 } from "@/components/Container";
 import styled from "styled-components";
 import { CardContent4, CardSubContainer } from "@/components/CardContent";
 import { ApplyButton } from "@/components/LearnMoreBtn";
 import { Page4Datas } from "@/utils/datas";
 import { NavCard } from "@/components/NavCard";
+import { Container, Grid } from "@mui/material";
 
 const LeftContent = styled.div`
   z-index: 1;
@@ -13,47 +14,37 @@ const LeftContent = styled.div`
   justify-content: space-between;
   align-items: stretch;
   color: #000;
+
+  @media (max-width: 899px) {
+    padding-right: 0;
+    justify-content: center;
+     width: 100%;
+  }
 `;
 
 const RightContent = styled.div`
-  width: 100%;
-  position: absolute;
-  left: 700px;
-  height: 100%;
-
-  .vid {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-  }
-  video {
     position: absolute;
-    height: 100%;
-    width: auto;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-  }
+    left: auto;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 45%;
+
   img {
     width: 100%;
     position: absolute;
     right: 0px;
-    left: 200px;
     height: 100%;
+    object-fit: cover;
   }
-`;
-const VideoWrap = styled.div`
-  position: absolute;
-  left: auto;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  z-index: 0;
-  display: flex;
-  width: 45%;
-  height: 100%;
-  justify-content: center;
+  @media (max-width: 899px) {
+    
+    position: static;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+ }
+
 `;
 
 const CarouselImage = styled.div<{ url: string }>`
@@ -87,64 +78,33 @@ const Title = styled.div`
   .heading {
     font-size: 3.75em;
     line-height: 1.1833333333333333em;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 20px;
     font-family: "Sequel Sans (Display)", sans-serif;
     color: #000;
   }
+
+   @media (max-width: 899px) {
+   padding-top: 50px;
+   padding-bottom: 20px;
+   .subheading{
+     font-size: 0.937em;
+   }
+   .heading {
+      font-size: 2.5em;
+   }
+   }
 `;
 
-const NavList = styled.div``;
 
-const NavLink = styled.a`
-  display: flex;
-  width: 100%;
-
-  border-top: 1px solid #97999b;
-  color: #000;
-  text-decoration: none;
-
-  padding-top: 0.95rem;
-  padding-bottom: 3.125rem;
-`;
-
-const NavHeading = styled.div`
-  width: 40%;
-  text-align: left;
-  display: block;
-
-  h3 {
-    margin-bottom: 10px;
-    font-family: SequelSans-SemiBoldBody, sans-serif;
-    color: #000;
-    font-size: 1.5em;
-    line-height: 1.208em;
-    max-width: 10ch;
-    font-family: "Sequel Sans (Display)", sans-serif;
-    font-weight: 600;
-  }
-`;
-
-const NavDesc = styled.div`
-  width: auto;
-  max-width: 29ch;
-  font-size: 1em;
-  margin-bottom: 10px;
-  font-family: "Sequel Sans (Display)", sans-serif;
-  line-height: 1.23em;
-  font-weight: 400;
-  text-decoration: none;
-`;
-
-const BenefBtn = styled.div`
-  .learn-more {
+const BenefBtn = styled.a`
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
 
     text-decoration: none;
     cursor: pointer;
-    width: 50%;
+    width: 240px;
     height: 60px;
 
     margin-right: 0px;
@@ -157,7 +117,7 @@ const BenefBtn = styled.div`
     background-color: transparent;
 
     transition: border-color 500ms ease, background-color 500ms ease,
-      filter 500ms ease, -webkit-filter 500ms ease;
+      filter 500ms ease;
     .link-text {
       margin-top: 8px;
       margin-bottom: 8px;
@@ -172,7 +132,7 @@ const BenefBtn = styled.div`
       padding-top: 0.5px;
     }
   }
-  a:hover {
+  &:hover {
     background-color: #000;
     .link-text {
       color: #ffffff;
@@ -182,19 +142,19 @@ const BenefBtn = styled.div`
       fill: currentColor;
     }
   }
+
 `;
 
 export function Page4() {
   const [active, setActive] = useState(Page4Datas[0].img);
   return (
-    <Container8>
-      <CardContent4>
+    <Layout8>
+      <Container>
         <LeftContent>
           <Title>
             <div className="subheading">BENEFITS</div>
             <h2 className="heading">Peace of mind included.</h2>
           </Title>
-          <NavList>
             {Page4Datas.map((values) => (
               <NavCard
                 title={values.title}
@@ -203,38 +163,15 @@ export function Page4() {
                 opacity={values ? true : false}
               />
             ))}
-          </NavList>
-
           <BenefBtn>
-            <a href="#Benefits" className="learn-more">
               <p className="link-text">SEE ALL BENEFITS</p>
               <img src="arrow.svg" alt="" className="arrow-right-black" />
-            </a>
           </BenefBtn>
         </LeftContent>
         <RightContent>
-          {/* <img
-            src="https://d2r6iglqr5ha6g.cloudfront.net/web/images/211124-2_neon-carousel_travel-responsive.jpg"
-            alt=""
-          /> */}
-
-          <CarouselImage url={active} />
-
-          {/* <VideoWrap>
-            <div className="vid">
-              <video
-                autoPlay
-                loop
-                muted
-                className="benefits-slider--bg-video"
-                poster="https://d2r6iglqr5ha6g.cloudfront.net/web/images/211129-1_hand-projection-map-2_website-export_loop.jpg"
-              >
-                <source src="https://d2r6iglqr5ha6g.cloudfront.net/web/video/benefits/211201-0_hand-projection-map-2_website-export_loop.mp4?raw=1" />
-              </video>
-            </div>
-          </VideoWrap> */}
+          <img src={active}/>
         </RightContent>
-      </CardContent4>
-    </Container8>
+      </Container>
+    </Layout8>
   );
 }

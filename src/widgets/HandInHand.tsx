@@ -19,6 +19,9 @@ const HandContainer = styled.div`
     color: white;
     font-size: 6.28em;
   }
+  .mobile_h2 {
+    display: none;
+  }
   .LogoContainer {
     position: absolute;
     left: 0%;
@@ -39,6 +42,42 @@ const HandContainer = styled.div`
       margin-bottom: 60px;
     }
   }
+  @media (max-width: 899px) {
+    .LogoContainer {
+      display: none;
+    }
+    .mobile_h2 {
+      display: block;
+      position: absolute;
+      left: 0%;
+      z-index: 2;
+      width: 100%;
+      font-size: 5.02125rem;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .p-text {
+      padding-top: 200px;
+      p {
+        max-width: none;
+        font-size: 1em;
+        line-height: 1.18em;
+      }
+      .dBtn {
+        display: none;
+      }
+    }
+
+    .cBtns {
+      margin-right: auto;
+      margin-left: auto;
+      position: static;
+      top: 0px;
+      bottom: auto;
+      height: auto;
+    }
+  }
 `;
 export const HandInHand = () => {
   const [active, setActive] = useState(HandInHandDatas[0].imgPath);
@@ -49,13 +88,15 @@ export const HandInHand = () => {
           <div className="LogoContainer" data-aos="flip-up">
             <Logo />
           </div>
+          <h2 className="mobile_h2">Hand In Hand</h2>
           <div className="p-text">
             <p>
               PointCard and its companion app complete each other — giving you
               clarity, speed, and transparency.
             </p>
-
-            <DownloadButton />
+            <div className="dBtn">
+              <DownloadButton />
+            </div>
             <CarouselBtn3 data-aos="fade-right">
               <div className="cBtns">
                 <div className="indicat">

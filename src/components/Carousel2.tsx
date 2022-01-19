@@ -5,15 +5,15 @@ const ImageContainer = styled.div`
   max-width: 2560px;
   img {
     position: relative;
-    -webkit-transform: translate(15%, 0px);
-    -ms-transform: translate(15%, 0px);
     transform: translate(15%, 0px);
-    -o-object-position: 50% 50%;
     object-position: 50% 50%;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
+  }
+
+  @media (max-width: 899px) {
+    transform: translate(-15%, 100px);
   }
 `;
 export const CarouselImage2 = ({ imgpath }: { imgpath: string }) => {

@@ -132,12 +132,7 @@ export const RewardSlider = ({
             </a>
           </LearnMoreBtn>
 
-          {/* <ApplyButton
-                backgroundColor="transparent"
-                borderColor="#fff"
-                text="APPLY"
-                textColor="#000000"
-              /> */}
+         
         </CardContentDesc>
       </CardContent2>
       <img src={img} height="" alt="A woman" className="tab-image" />

@@ -2,6 +2,7 @@ import { CardContent } from "@/components/CardContent";
 import { ContainerPh } from "@/components/Container";
 import { Phone1 } from "@/components/Logo";
 import styled from "styled-components";
+
 const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -59,6 +60,18 @@ const SubContainer = styled.div`
     font-size: 3.75em;
     line-height: 1.185em;
     font-weight: 500;
+  }
+  
+  @media (max-width: 899px) {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    h3 {  
+      font-size: 0.937em;
+    }
+    h2{
+      font-size: 2.5em;
+    }
   }
 `;
 const LeftContainer = styled.div`
