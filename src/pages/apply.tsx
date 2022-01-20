@@ -9,7 +9,7 @@ const Layout = styled.div`
   position: relative;
 
   display: flex;
-  overflow: hidden;
+
   width: 100%;
 
   flex-direction: row;
@@ -37,6 +37,7 @@ const Text = styled.div`
 `;
 
 const InnerBG = styled.div`
+  z-index: -1;
   position: absolute;
   top: 0%;
   right: 0%;
@@ -45,13 +46,16 @@ const InnerBG = styled.div`
   height: 100%;
   margin-left: auto;
   background-color: #fff;
+  @media (max-width: 899px) {
+    display: none;
+  }
 `;
 
 const Apply: NextPage = () => {
   return (
     <Layout>
       <Container>
-        <Grid container>
+        <Grid container position="relative">
           <Grid item md={6} sm={12}>
             <ApplyTopContainer>
               <div className="text">
