@@ -2,7 +2,7 @@ import useScroll from "@/hooks/useScroll";
 import useWindowSize from "@/hooks/useWindowSize";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-
+import Link from "next/link";
 const Layout = styled.div`
   background-color: hsla(0, 0%, 76.9%, 0.3);
   -webkit-backdrop-filter: blur(54px);
@@ -27,8 +27,12 @@ const Layout = styled.div`
     display: flex;
     justify-content: space-between;
   }
-  @media (max-width: 900px) {
+  @media (max-width: 890px) {
     padding: 0 16px;
+    height: 70px;
+    .flex {
+      height: 70px;
+    }
   }
 `;
 
@@ -77,7 +81,9 @@ export const Header = () => {
       <Container>
         <div className="flex">
           <img src="/waves-logo.png" />
-          <Button>Apply</Button>
+          <Link href="/apply">
+            <Button>Apply</Button>
+          </Link>
         </div>
       </Container>
     </Layout>
