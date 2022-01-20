@@ -71,10 +71,12 @@ const TextContainer = styled.div`
       }
     }
     h3 {
-      font-size: 0.937em;
+      font-size: 15px;
+      font-weight: 400;
     }
     h2 {
-      font-size: 2.5em;
+      font-size: 28px;
+      /* font-weight: 600; */
     }
   }
 `;

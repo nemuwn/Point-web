@@ -21,7 +21,7 @@ const NavLink = styled.a<{ opacity: number }>`
     display: flex;
     flex-direction: column;
     padding-bottom: 1.125rem;
-    }
+  }
 `;
 
 const NavHeading = styled.div`
@@ -40,9 +40,10 @@ const NavHeading = styled.div`
   }
   @media (max-width: 899px) {
     width: 100%;
-     h3 {
-         max-width: 20ch;
-     }
+    h3 {
+      font-size: 20px;
+      max-width: 20ch;
+    }
   }
 `;
 
@@ -60,7 +61,7 @@ const NavDesc = styled.div`
   @media (max-width: 899px) {
     display: none;
     width: 100%;
-     max-width: 40ch;
+    max-width: 40ch;
   }
 `;
 

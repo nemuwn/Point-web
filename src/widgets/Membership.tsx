@@ -45,7 +45,7 @@ const SubContainer = styled.div`
     align-items: center;
     padding-bottom: 0px;
     .text2 h3 {
-      font-size: 26px;
+      font-size: 28px;
     }
     .text h2 {
       font-size: 1.3125em;

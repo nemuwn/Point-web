@@ -13,6 +13,7 @@ import { SwitchButton } from "@/components/Button";
 import { CarouselImage2 } from "@/components/Carousel2";
 import { HandInHandDatas } from "@/utils/datas";
 import { useState } from "react";
+
 const HandContainer = styled.div`
   display: flex;
   h2 {
@@ -52,16 +53,17 @@ const HandContainer = styled.div`
       left: 0%;
       z-index: 2;
       width: 100%;
-      font-size: 50px;
+      font-size: 28px;
       line-height: 1;
       color: #fff;
       margin-bottom: 20px;
     }
     .p-text {
-      padding-top: 200px;
+      padding-top: 50px;
       p {
         max-width: none;
-        font-size: 1em;
+        font-size: 15px;
+        font-weight: 400;
         line-height: 1.18em;
       }
       .dBtn {
@@ -72,6 +74,7 @@ const HandContainer = styled.div`
     .cBtns {
       margin-right: auto;
       margin-left: auto;
+      justify-content: center;
       position: static;
       top: 0px;
       bottom: auto;

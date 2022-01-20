@@ -38,7 +38,8 @@ const Subheading = styled.div`
   text-transform: uppercase;
   margin-bottom: 10px;
   @media (max-width: 899px) {
-    font-size: 0.937em;
+    font-size: 15px;
+    font-weight: 400;
   }
 `;
 
@@ -49,7 +50,7 @@ const Heading = styled.h2`
   margin-bottom: 10px;
 
   @media (max-width: 899px) {
-    font-size: 2.5em;
+    font-size: 28px;
     line-height: 1.2em;
   }
 `;
@@ -61,6 +62,8 @@ const Desc = styled.p`
   line-height: 1.23em;
 
   @media (max-width: 899px) {
+    font-size: 15px;
+    font-weight: 400;
     width: 100%;
     margin-bottom: 0px;
     line-height: 19px;

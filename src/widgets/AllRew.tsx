@@ -64,10 +64,10 @@ const CardCont = styled.div`
     padding: 0px;
     align-items: center;
     h3 {
-      font-size: 0.937em;
+      font-size: 15px;
     }
     h2 {
-      font-size: 3.5em;
+      font-size: 28px;
       line-height: 1.1865em;
     }
     .desc {
@@ -75,7 +75,7 @@ const CardCont = styled.div`
 
       p {
         margin-bottom: 0px;
-        font-size: 1em;
+        font-size: 15px;
         line-height: 1.187em;
       }
     }

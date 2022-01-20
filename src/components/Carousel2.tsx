@@ -13,7 +13,7 @@ const ImageContainer = styled.div`
   }
 
   @media (max-width: 899px) {
-    transform: translate(-15%, 100px);
+    transform: translate(-15%, -20px);
   }
 `;
 export const CarouselImage2 = ({ imgpath }: { imgpath: string }) => {

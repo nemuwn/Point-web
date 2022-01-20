@@ -56,14 +56,25 @@ const TopText = styled.div`
     height: auto;
     h1 {
       margin-bottom: 0px;
-      font-size: 2.5em;
+      font-size: 28px;
     }
     .access {
       margin-bottom: 0px;
-      font-size: 0.937em;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    .enjoy {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 400;
     }
     .SubContain {
       padding: 0;
+    }
+    .footertext {
+      font-size: 15px;
+      font-weight: 400;
+      padding-right: 10px;
     }
   }
 `;

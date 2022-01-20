@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { Layout8 } from "@/components/Container";
 import styled from "styled-components";
-import { CardContent4, CardSubContainer } from "@/components/CardContent";
-import { ApplyButton } from "@/components/LearnMoreBtn";
 import { Page4Datas } from "@/utils/datas";
 import { NavCard } from "@/components/NavCard";
-import { Container, Grid } from "@mui/material";
+import { Container } from "@mui/material";
 
 const LeftContent = styled.div`
   z-index: 1;
@@ -38,29 +36,16 @@ const RightContent = styled.div`
     object-fit: cover;
   }
   @media (max-width: 899px) {
+    padding-top: 30px;
     position: static;
     overflow: hidden;
     width: 100%;
     height: 500px;
+    img {
+      object-fit: contain;
+      height: auto;
+    }
   }
-`;
-
-const CarouselImage = styled.div<{ url: string }>`
-  width: 100%;
-  position: absolute;
-  right: 0px;
-  left: 300px;
-  height: 100%;
-
-  background-position: top left;
-  /* background-position: center; */
-  /* background-size: 1024px; */
-
-  // background-size: 100% 1024px;
-  background-image: url(${(props) => props.url});
-  background-repeat: no-repeat;
-  /* background-attachment: fixed;  heregtei*/
-  transition: all 2s ease-out;
 `;
 
 const Title = styled.div`
@@ -86,10 +71,11 @@ const Title = styled.div`
     padding-top: 0px;
     padding-bottom: 20px;
     .subheading {
-      font-size: 0.937em;
+      font-size: 15px;
+      font-weight: 400;
     }
     .heading {
-      font-size: 2.5em;
+      font-size: 28px;
     }
   }
 `;

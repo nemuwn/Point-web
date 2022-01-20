@@ -61,10 +61,12 @@ const Description = styled.div`
     padding-top: 0px;
     width: 100%;
     h2 {
-      font-size: 2.5em;
+      font-size: 28px;
     }
     p {
       width: auto;
+      font-size: 15px;
+      font-weight: 400;
       line-height: 1.23em;
     }
   }

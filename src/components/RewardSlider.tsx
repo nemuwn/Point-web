@@ -45,16 +45,17 @@ const CardContentDesc = styled.div`
 
   @media (max-width: 899px) {
     .subheading {
-      font-size: 0.937em;
+      font-size: 15px;
     }
     h2 {
-      font-size: 2.5em;
+      font-size: 28px;
     }
     .desc {
       max-width: 300px;
       p {
         line-height: 1.187em;
-        font-size: 1em;
+        font-size: 15px;
+        font-weight: 400;
       }
     }
   }

@@ -58,7 +58,7 @@ const CardStyled = styled.div<{ opacity: number }>`
     border-top: 1px solid ${(props) => (props.opacity ? "#fff" : "#222222")};
     padding: 20px 10px 0 0;
     h2 {
-      font-size: 22px;
+      font-size: 28px;
     }
     #text {
       display: none;
