@@ -11,6 +11,10 @@ const Layout = styled.div`
   align-items: center;
   background-color: #e3e3e3;
   z-index: 1;
+  @media (max-width: 899px) {
+    height: 100%;
+    padding: 100px 0px;
+  }
 `;
 
 const CardCont = styled.div`
@@ -56,6 +60,8 @@ const CardCont = styled.div`
   @media (max-width: 899px) {
     width: 90%;
     margin: auto;
+    height: 100%;
+    padding: 0px;
     align-items: center;
     h3 {
       font-size: 0.937em;

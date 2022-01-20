@@ -148,6 +148,7 @@ export const CarouselBtn2 = styled.div`
       }
       .indicat {
         justify-content: center;
+        margin-bottom: 40px;
       }
     }
   }

@@ -42,8 +42,10 @@ const SubContainer = styled.div`
   }
 
   @media (max-width: 899px) {
+    align-items: center;
+    padding-bottom: 0px;
     .text2 h3 {
-      font-size: 2.375em;
+      font-size: 26px;
     }
     .text h2 {
       font-size: 1.3125em;

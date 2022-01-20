@@ -20,13 +20,12 @@ export const CardContent = styled.div`
     .switch {
       align-self: flex-end;
     }
-    .aafuck {
-    }
   }
   .headersection {
     margin-bottom: 100px;
   }
   @media only screen and (max-width: 899px) {
+    padding-top: 100 px;
     width: 85%;
     justify-content: none;
     height: auto;
@@ -61,6 +60,9 @@ export const CardContent3 = styled.div`
   max-width: 1200px;
   margin: auto;
   padding-top: 100px;
+  @media (max-width: 899px) {
+    padding-top: 0px;
+  }
 `;
 
 export const CardContent4 = styled.div`

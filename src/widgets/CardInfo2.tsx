@@ -23,7 +23,7 @@ const Layout = styled.div`
     margin-top: 0;
     display: block;
     height: auto;
-    padding: 60px 0;
+    padding: 100px 0;
   }
 `;
 

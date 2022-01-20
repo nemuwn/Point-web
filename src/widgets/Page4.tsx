@@ -83,7 +83,7 @@ const Title = styled.div`
   }
 
   @media (max-width: 899px) {
-    padding-top: 50px;
+    padding-top: 0px;
     padding-bottom: 20px;
     .subheading {
       font-size: 0.937em;

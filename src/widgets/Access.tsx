@@ -54,7 +54,6 @@ const TopText = styled.div`
   @media screen and (max-width: 899px) {
     width: 100%;
     height: auto;
-    margin-top: 65px;
     h1 {
       margin-bottom: 0px;
       font-size: 2.5em;
@@ -62,7 +61,6 @@ const TopText = styled.div`
     .access {
       margin-bottom: 0px;
       font-size: 0.937em;
-      margin-top: 65px;
     }
     .SubContain {
       padding: 0;
