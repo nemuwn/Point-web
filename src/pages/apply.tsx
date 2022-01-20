@@ -7,17 +7,26 @@ import ApplyWidget from "@/widgets/apply/index";
 
 const Layout = styled.div`
   position: relative;
-
   display: flex;
-
   width: 100%;
-
   flex-direction: row;
   justify-content: center;
-
   align-items: center;
   background-color: #e5e5e5;
   z-index: 1;
+
+  @media (max-width: 899px) {
+    .mui {
+      padding: 0px 0px;
+    }
+    .text h1 {
+      font-size: 45px;
+      margin: auto;
+    }
+    .bannerimg {
+      padding-left: 25px;
+    }
+  }
 `;
 
 const RightContent = styled.div`
@@ -30,10 +39,17 @@ const RightContent = styled.div`
     font-weight: 300;
     margin-bottom: 20px;
   }
+
+  @media (max-width: 899px) {
+    padding: 100px 25px;
+  }
 `;
 
 const Text = styled.div`
   padding-right: 50px;
+  @media (max-width: 899px) {
+    padding: 0px 25px;
+  }
 `;
 
 const InnerBG = styled.div`
@@ -76,12 +92,17 @@ const SubmitBtn = styled.div`
     border-color: #000000;
     color: #000000;
   }
+  @media (max-width: 899px) {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
 `;
 
 const Apply: NextPage = () => {
   return (
     <Layout>
-      <Container>
+      <Container className="mui">
         <Grid container position="relative">
           <Grid item md={6} sm={12}>
             <ApplyTopContainer>

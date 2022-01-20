@@ -169,6 +169,9 @@ export const ApplyTopContainer = styled.div`
       margin-bottom: 16px;
     }
   }
+  @media (max-width: 899px) {
+    padding: 100px 0px;
+  }
 `;
 
 export const ContainerPh = styled.div`

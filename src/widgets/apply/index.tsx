@@ -28,7 +28,6 @@ const Radio = styled.div`
   .content label {
     margin-bottom: 16px;
     font-weight: 300;
-
     line-height: 20px;
   }
   .content .desc {
@@ -38,8 +37,11 @@ const Radio = styled.div`
     display: flex;
     margin-bottom: 10px;
   }
+  .sub {
+    margin-bottom: 20px;
+  }
   @media (max-width: 899px) {
-    width: 87%;
+    width: 100%;
   }
 `;
 
@@ -49,7 +51,12 @@ const FormSep = styled.div`
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 899px) {
+    width: 100%;
+  }
 `;
+
 const InpForm = styled.div`
   display: block;
   input {
@@ -58,7 +65,7 @@ const InpForm = styled.div`
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 16px;
     margin-top: 10px;
     padding: 20px;
@@ -69,6 +76,11 @@ const InpForm = styled.div`
     box-sizing: border-box;
     margin-bottom: 20px;
     font-size: 18px;
+  }
+  @media (max-width: 899px) {
+    input {
+      width: 100%;
+    }
   }
 `;
 
@@ -173,8 +185,9 @@ const ApplyWidget = () => {
         <FormSep />
 
         <h2>Тохиргоо</h2>
-        <p>Банкаа сонгон уу</p>
+
         <Radio>
+          <p className="sub">Банкаа сонгон уу</p>
           <Grid
             container
             direction="column"
@@ -213,8 +226,9 @@ const ApplyWidget = () => {
           </Grid>
         </Radio>
         <FormSep />
-        <p>Финтекүүдээ сонгон уу</p>
+
         <Radio>
+          <p className="sub">Финтекүүдээ сонгон уу</p>
           <Grid
             container
             direction="column"
