@@ -30,7 +30,7 @@ const Layout = styled.div`
 const CarouselImage = styled.img`
   width: 100%;
   position: relative;
-  top: -120px;
+  top: 10px;
   @media (max-width: 899px) {
     top: 0;
   }

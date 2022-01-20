@@ -9,7 +9,7 @@ const Layout = styled.div`
   position: relative;
 
   display: flex;
-  overflow: hidden;
+
   width: 100%;
 
   flex-direction: row;
@@ -37,21 +37,52 @@ const Text = styled.div`
 `;
 
 const InnerBG = styled.div`
+  z-index: -1;
   position: absolute;
   top: 0%;
   right: 0%;
   bottom: 0%;
-  width: 20%;
+  width: 50%;
   height: 100%;
   margin-left: auto;
   background-color: #fff;
+  @media (max-width: 899px) {
+    display: none;
+  }
+`;
+
+const SubmitBtn = styled.div`
+  input {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+
+    width: 80%;
+    min-height: 46px;
+    margin-top: 24px;
+    padding: 10px 15px;
+
+    border-radius: 32px;
+    border-width: 1px;
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #000000;
+    transition: all 0.5s;
+  }
+  input:hover {
+    background-color: #ffffff;
+    border-color: #000000;
+    color: #000000;
+  }
 `;
 
 const Apply: NextPage = () => {
   return (
     <Layout>
       <Container>
-        <Grid container>
+        <Grid container position="relative">
           <Grid item md={6} sm={12}>
             <ApplyTopContainer>
               <div className="text">
@@ -98,6 +129,14 @@ const Apply: NextPage = () => {
             <RightContent>
               <h2>Захиалга</h2>
               <ApplyWidget />
+              <SubmitBtn>
+                <input
+                  type="submit"
+                  name="commit"
+                  value="Submit"
+                  data-disable-with="Submit"
+                />
+              </SubmitBtn>
             </RightContent>
           </Grid>
         </Grid>

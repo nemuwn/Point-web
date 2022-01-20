@@ -149,6 +149,8 @@ export const ApplyTopContainer = styled.div`
   justify-content: flex-start;
   padding-top: 140px;
   padding-bottom: 100px;
+  position: sticky;
+  top: 0;
   .text {
     display: flex;
     h1 {

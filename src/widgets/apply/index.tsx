@@ -40,6 +40,9 @@ const Radio = styled.div`
     display: flex;
     margin-bottom: 10px;
   }
+  @media (max-width: 899px) {
+    width: 87%;
+  }
 `;
 
 const FormSep = styled.div`
