@@ -51,6 +51,7 @@ export const CardContent2 = styled.div`
   max-width: 1200px;
   margin: auto;
   padding-top: 100px;
+  padding-bottom: 100px;
 `;
 
 export const CardContent3 = styled.div`
