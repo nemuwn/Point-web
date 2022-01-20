@@ -52,7 +52,7 @@ const HandContainer = styled.div`
       left: 0%;
       z-index: 2;
       width: 100%;
-      font-size: 5.02125rem;
+      font-size: 50px;
       line-height: 1;
       color: #fff;
       margin-bottom: 20px;

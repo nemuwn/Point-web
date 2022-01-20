@@ -14,6 +14,10 @@ export const Container = styled.div`
   align-items: center;
   background-color: #000;
   z-index: 1;
+  @media (max-width: 899px) {
+    padding: 100px 0px;
+    height: 100%;
+  }
 `;
 
 export const Container2 = styled.div<{ bgColor: string }>`
@@ -35,7 +39,7 @@ export const Container2 = styled.div<{ bgColor: string }>`
   z-index: 1;
   @media (max-width: 899px) {
     width: 100%;
-    padding-top: 0;
+
     flex-direction: row;
     background-size: cover;
   }
@@ -72,6 +76,9 @@ export const Container4 = styled.div`
 
   background-color: #f8f8f8;
   z-index: 1;
+  @media (max-width: 899px) {
+    padding: 100px 0px;
+  }
 `;
 
 export const Container6 = styled.div`
@@ -93,6 +100,9 @@ export const Container7 = styled.div`
   position: relative;
   background-color: #fff;
   z-index: 99;
+  @media (max-width: 899px) {
+    padding: 100px 0px;
+  }
 `;
 
 export const Layout8 = styled.div`
@@ -109,6 +119,9 @@ export const Layout8 = styled.div`
 
   background-color: #fff;
   z-index: 1;
+  @media (max-width: 899px) {
+    padding: 100px 0px;
+  }
 `;
 
 export const SwitchButtonContainer = styled.div`

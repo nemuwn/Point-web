@@ -50,6 +50,7 @@ const Slider = styled.div`
   }
 
   @media (max-width: 899px) {
+    height: 100%;
     .tab-image {
       object-position: 46% 50%;
     }

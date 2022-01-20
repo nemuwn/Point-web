@@ -16,7 +16,6 @@ const CardCont = styled.div`
 const Content = styled.div`
   position: relative;
   z-index: 4;
-  position: relative;
   left: 0%;
   top: auto;
   right: auto;
@@ -26,9 +25,8 @@ const Content = styled.div`
   width: 100%;
   height: auto;
   padding-top: 100px;
-
   @media (max-width: 899px) {
-    padding-top: 80px;
+    padding-top: 0px;
   }
 `;
 
