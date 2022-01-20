@@ -10,7 +10,9 @@ const Radio = styled.div`
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
-
+  .content {
+    transition: all 2s linear 1s;
+  }
   input {
     width: 18px;
     height: 18px;
@@ -92,6 +94,7 @@ const ApplyWidget = () => {
                   more="Show more"
                   less="Show less"
                   className="content"
+                  anchorClass="contentanchor"
                   onClick={() => {
                     console.log("expanded");
                   }}
