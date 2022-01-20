@@ -15,7 +15,7 @@ export const Container = styled.div`
   background-color: #000;
   z-index: 1;
   @media (max-width: 899px) {
-    padding: 100px 0px;
+    padding-top: 100px;
     height: 100%;
   }
 `;
@@ -120,7 +120,7 @@ export const Layout8 = styled.div`
   background-color: #fff;
   z-index: 1;
   @media (max-width: 899px) {
-    padding: 100px 0px;
+    padding-top: 100px;
   }
 `;
 
@@ -181,7 +181,7 @@ export const ContainerPh = styled.div`
   overflow: hidden;
   width: 100%;
   height: 1024px;
-  padding-top: 100px;
+  padding: 100px 0px;
 
   flex-direction: row;
 
