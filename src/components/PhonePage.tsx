@@ -96,6 +96,8 @@ const LeftContainer = styled.div`
     padding: 50px 0px;
     p {
       font-size: 1.125em;
+      font-weight: 300;
+      line-height: 20px;
     }
   }
 `;
