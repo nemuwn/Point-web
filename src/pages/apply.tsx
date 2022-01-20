@@ -51,6 +51,33 @@ const InnerBG = styled.div`
   }
 `;
 
+const SubmitBtn = styled.div`
+  input {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+
+    width: 80%;
+    min-height: 46px;
+    margin-top: 24px;
+    padding: 10px 15px;
+
+    border-radius: 32px;
+    border-width: 1px;
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #000000;
+    transition: all 0.5s;
+  }
+  input:hover {
+    background-color: #ffffff;
+    border-color: #000000;
+    color: #000000;
+  }
+`;
+
 const Apply: NextPage = () => {
   return (
     <Layout>
@@ -102,6 +129,14 @@ const Apply: NextPage = () => {
             <RightContent>
               <h2>Захиалга</h2>
               <ApplyWidget />
+              <SubmitBtn>
+                <input
+                  type="submit"
+                  name="commit"
+                  value="Submit"
+                  data-disable-with="Submit"
+                />
+              </SubmitBtn>
             </RightContent>
           </Grid>
         </Grid>
