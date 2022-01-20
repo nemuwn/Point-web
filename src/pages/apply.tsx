@@ -42,7 +42,7 @@ const InnerBG = styled.div`
   top: 0%;
   right: 0%;
   bottom: 0%;
-  width: 20%;
+  width: 50%;
   height: 100%;
   margin-left: auto;
   background-color: #fff;
