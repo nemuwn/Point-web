@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Grid } from "@mui/material";
 import ShowMoreText from "react-show-more-text";
 import styled from "styled-components";
-
 const FormRow = styled.div``;
 
 const Radio = styled.div`
@@ -41,6 +40,12 @@ const Radio = styled.div`
   }
   .sub {
     margin-bottom: 20px;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
   }
   @media (max-width: 899px) {
     width: 100%;
@@ -240,26 +245,44 @@ const ApplyWidget = () => {
           >
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="radio" />
+                <input type="checkbox" />
                 Qpay
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="radio" />
+                <input type="checkbox" />
                 Social Pay
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="radio" />
+                <input type="checkbox" />
                 SuperUp
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="radio" />
+                <input type="checkbox" />
                 Mongol chat
+              </label>
+            </Grid>
+            <Grid item md={12}>
+              <label htmlFor="">
+                <input type="checkbox" />
+                Meme chat
+              </label>
+            </Grid>
+            <Grid item md={12}>
+              <label htmlFor="">
+                <input type="checkbox" />
+                Monpay
+              </label>
+            </Grid>
+            <Grid item md={12}>
+              <label htmlFor="">
+                <input type="checkbox" />
+                Pocket
               </label>
             </Grid>
           </Grid>
