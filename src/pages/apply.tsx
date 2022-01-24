@@ -67,7 +67,7 @@ const InnerBG = styled.div`
   }
 `;
 
-const SubmitBtn = styled.div`
+export const SubmitBtn = styled.div`
   input {
     cursor: pointer;
     font-size: 12px;
@@ -150,14 +150,6 @@ const Apply: NextPage = () => {
             <RightContent>
               <h2>Захиалга</h2>
               <ApplyWidget />
-              <SubmitBtn>
-                <input
-                  type="submit"
-                  name="commit"
-                  value="Submit"
-                  data-disable-with="Submit"
-                />
-              </SubmitBtn>
             </RightContent>
           </Grid>
         </Grid>

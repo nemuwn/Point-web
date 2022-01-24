@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Grid } from "@mui/material";
 import ShowMoreText from "react-show-more-text";
 import styled from "styled-components";
+import useApply from "./useApply";
+import { SubmitBtn } from "@/pages/apply";
 const FormRow = styled.div``;
 
 const Radio = styled.div`
@@ -92,9 +94,10 @@ const InpForm = styled.div`
 `;
 
 const ApplyWidget = () => {
+  const { submit, handleSubmit, register } = useApply();
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit(submit)}>
         <FormSep />
         <FormRow>
           <Grid
@@ -106,7 +109,11 @@ const ApplyWidget = () => {
             <Grid item md={12}>
               <Radio>
                 <label>
-                  <input type="radio" name="machine"></input>
+                  <input
+                    type="radio"
+                    value="Si Plus"
+                    {...register("deviceModel", { required: true })}
+                  ></input>
                   <h3>Si Plus</h3>
                 </label>
                 <ShowMoreText
@@ -149,7 +156,11 @@ const ApplyWidget = () => {
             <Grid item md={12}>
               <Radio>
                 <label>
-                  <input type="radio" name="machine"></input>
+                  <input
+                    type="radio"
+                    value="Si Pro"
+                    {...register("deviceModel", { required: true })}
+                  ></input>
                   <h3>Si Pro</h3>
                 </label>
                 <ShowMoreText
@@ -208,26 +219,41 @@ const ApplyWidget = () => {
                   id="Golomt"
                   type="radio"
                   value="Golomt Bank"
-                  name="Bank"
+                  {...register("bank", { required: true })}
                 />
                 Golomt Bank
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="Khan">
-                <input id="Khan" type="radio" value="Khan BANK" name="Bank" />
+                <input
+                  id="Khan"
+                  type="radio"
+                  value="Khan BANK"
+                  {...register("bank", { required: true })}
+                />
                 Khan Bank
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="TDB">
-                <input id="TDB" type="radio" value="TDB" name="Bank" />
+                <input
+                  id="TDB"
+                  type="radio"
+                  value="TDB"
+                  {...register("bank", { required: true })}
+                />
                 TDB
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="Tur">
-                <input id="Tur" type="radio" value="Turiin Bank" name="Bank" />
+                <input
+                  id="Tur"
+                  type="radio"
+                  value="Turiin Bank"
+                  {...register("bank", { required: true })}
+                />
                 Turiin Bank
               </label>
             </Grid>
@@ -245,43 +271,71 @@ const ApplyWidget = () => {
           >
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  value="Qpay"
+                  {...register("fintech", { required: true })}
+                />
                 Qpay
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  value="Social Pay"
+                  {...register("fintech", { required: true })}
+                />
                 Social Pay
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  value="SuperUp"
+                  {...register("fintech", { required: true })}
+                />
                 SuperUp
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  value="Mongol chat"
+                  {...register("fintech", { required: true })}
+                />
                 Mongol chat
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  value="Meme chat"
+                  {...register("fintech", { required: true })}
+                />
                 Meme chat
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  value="MonPay"
+                  {...register("fintech", { required: true })}
+                />
                 Monpay
               </label>
             </Grid>
             <Grid item md={12}>
               <label htmlFor="">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  value="Pocket"
+                  {...register("fintech", { required: true })}
+                />
                 Pocket
               </label>
             </Grid>
@@ -295,11 +349,16 @@ const ApplyWidget = () => {
               placeholder="Өөрийн нэрээ бичнэ үү"
               id="name"
               className="sc-1kmc4e5-5 iekNQU"
+              {...register("customerName", { required: true })}
             />
           </div>
           <div className="inp">
             <label>Email</label>
-            <input type="email" placeholder="email@point.app" />
+            <input
+              type="email"
+              placeholder="email@point.app"
+              {...register("email", { required: true })}
+            />
           </div>
           <div className="inp">
             <label>Phone Number</label>
@@ -307,6 +366,7 @@ const ApplyWidget = () => {
               type="number"
               placeholder="Өөрийн дугаараа бичнэ үү"
               id="phone"
+              {...register("phoneNumber", { required: true })}
             />
           </div>
           <div className="inp">
@@ -315,9 +375,18 @@ const ApplyWidget = () => {
               type="number"
               placeholder="Захаилах тоо ширхэгээ бичнэ үү"
               id="number"
+              {...register("quantity", { required: true })}
             />
           </div>
         </InpForm>
+        <SubmitBtn>
+          <input
+            type="submit"
+            name="commit"
+            value="Submit"
+            data-disable-with="Submit"
+          />
+        </SubmitBtn>
       </form>
     </>
   );
