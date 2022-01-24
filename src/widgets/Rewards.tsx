@@ -195,16 +195,10 @@ export function Rewards({ slides }: { slides: any }) {
           </div>
           <div className="arrows" data-aos="fade-left">
             <Bullet className="sArrow arrLeft" onClick={prevSlide}>
-              <img
-                src="https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/5f318accd2b9306aa790f06e_Medium-Arrow-regular_20x20.svg"
-                alt=""
-              />
+              <img src="MediumArrow.svg" />
             </Bullet>
             <Bullet className="sArrow arrRight" onClick={nextSlide}>
-              <img
-                src="https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/5f318accd2b9306aa790f06e_Medium-Arrow-regular_20x20.svg"
-                alt=""
-              />
+              <img src="MediumArrow.svg" />
             </Bullet>
           </div>
         </div>
