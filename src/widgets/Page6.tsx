@@ -77,71 +77,84 @@ const MobileImage = styled.div`
     display: block;
   }
 `;
+const ParentContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 1024px;
+`;
 export const Page6 = () => {
-  const [active, setActive] = useState(Page6Datas[0].img[0]);
+  const [active, setActive] = useState(0);
+  const [zIndices, setZIndices] = useState([1, 0, 0, 0]);
+  const [carouselImage, setcarouselImage] = useState(0);
+  const selectCard = (newIndex: number) => {
+    const oldActive = active;
+    const newIndices = [...zIndices];
+    newIndices[newIndex] = zIndices[oldActive] + 1;
+    setActive(newIndex);
+    setZIndices(newIndices);
+  };
 
-  const [index, setIndex] = useState(0);
-
-  const [bgColor, setbgColor] = useState(
-    "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a57c9f38981289c6e10dcf_yellow_10x10.jpg"
-  );
-  useEffect(() => {
-    setActive(Page6Datas[index].img[0]);
-  }, [index]);
   return (
-    <Container2 bgColor={bgColor}>
-      <CardContent>
-        <div className="headersection">
-          <SubContain>
-            <div className="editon">Editions</div>
-            <h3>N-1</h3>
-            <h3>RUNWAY YELLOW</h3>
-          </SubContain>
+    <ParentContainer>
+      {ColorSwitch.map((values, index) => (
+        <Container2
+          bgColor={values.img}
+          active={index === active}
+          zIndex={zIndices[index]}
+        >
+          <CardContent>
+            <div className="headersection">
+              <SubContain>
+                <div className="editon">Editions</div>
+                <h3>N-1</h3>
+                <h3>RUNWAY YELLOW</h3>
+              </SubContain>
 
-          <CarouselImage img={active ?? ""} />
-        </div>
-
-        <Description>
-          <h2>Formed for function.</h2>
-          <p>
-            Designed for function first. Obsessive attention to detail from
-            conception to production results in an object that is future-forward
-            and distinctive.
-          </p>
-        </Description>
-        <MobileImage>
-          <CarouselImage img={active ?? ""} />
-        </MobileImage>
-      </CardContent>
-
-      <CarouselBtn2 data-aos="fade-up">
-        <div className="cBtns">
-          <div className="indicat">
-            {PagButton.map((values) => (
-              <Btn
-                submit={() => setActive(Page6Datas[index].img[values.id])}
-                id={values.id}
-                text={values.text}
-                key={values.id}
+              <CarouselImage
+                img={values.img2[carouselImage] ?? ""}
+                big={carouselImage === 2}
               />
-            ))}
-          </div>
-          <div className="arrows">
-            <SwitchButtonContainer>
-              {ColorSwitch.map((data) => (
-                <SwitchButton
-                  onClick={() => {
-                    setIndex(data.id);
-                    setbgColor(data.img);
-                  }}
-                  backColor={data.color}
-                  key={data.id}
-                />
-              ))}
-            </SwitchButtonContainer>
-          </div>
-        </div>
-      </CarouselBtn2>
-    </Container2>
+            </div>
+
+            <Description>
+              <h2>{values.header}</h2>
+              <p>{values.description}</p>
+            </Description>
+            <MobileImage>
+              <CarouselImage img={values.img} />
+            </MobileImage>
+          </CardContent>
+
+          <CarouselBtn2 data-aos="fade-up">
+            <div className="cBtns">
+              <div className="indicat">
+                {PagButton.map((buttonValue) => (
+                  <Btn
+                    submit={() => setcarouselImage(buttonValue.id)}
+                    // submit={() => setActive(Page6Datas[index].img[values.id])}
+                    id={buttonValue.id}
+                    text={buttonValue.text}
+                    key={buttonValue.id}
+                  />
+                ))}
+              </div>
+              <div className="arrows">
+                <SwitchButtonContainer>
+                  {ColorSwitch.map((data) => (
+                    <SwitchButton
+                      onClick={() => {
+                        selectCard(data.id);
+                      }}
+                      backColor={data.color}
+                      key={data.id}
+                    />
+                  ))}
+                </SwitchButtonContainer>
+              </div>
+            </div>
+          </CarouselBtn2>
+        </Container2>
+      ))}
+    </ParentContainer>
   );
 };

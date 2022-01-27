@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   position: relative;
@@ -20,8 +20,12 @@ export const Container = styled.div`
   }
 `;
 
-export const Container2 = styled.div<{ bgColor: string }>`
-  position: relative;
+export const Container2 = styled.div<{
+  bgColor: string;
+  zIndex: number;
+  active: boolean;
+}>`
+  position: absolute;
 
   display: flex;
   overflow: hidden;
@@ -29,14 +33,21 @@ export const Container2 = styled.div<{ bgColor: string }>`
   height: 1024px;
   padding-top: 100px;
   flex-direction: column;
-  /* background-color: ${(props) => props.bgColor}; */
-
   background-image: url(${(props) => props.bgColor});
   background-size: 100%;
-  transition: background-image 0.2s ease-in-out;
   background-repeat: no-repeat, repeat;
   text-align: center;
-  z-index: 1;
+  clip-path: inset(0);
+  transition: clip-path 1s ease 1s;
+  z-index: ${(props) => props.zIndex};
+
+  clip-path: ${({ active }) =>
+    active ? css`inset(0)` : css`inset(0 0 0 100%)`};
+  ${({ active }) =>
+    active &&
+    css`
+      transition-delay: 0s;
+    `}
   @media (max-width: 899px) {
     width: 100%;
 

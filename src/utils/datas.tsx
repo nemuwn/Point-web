@@ -162,21 +162,54 @@ export const ColorSwitch = [
     id: 0,
     color: "#faff2e",
     img: "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a57c9f38981289c6e10dcf_yellow_10x10.jpg",
+    header: "Designed with purpose.",
+    description:
+      "Custom engineered for form, function and durability, PointCard features an advanced chipset for secure payments, a high-tensile synthetic polymer construction, and comes in your choice of four editions.",
+    img2: [
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a580eda7a114cd5b23e8b2_yellowfront_P3_wide_2x_cropped.jpg",
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a580f094cd6e6f0675c3eb_yellowback_P3_wide_2x_cropped.jpg",
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a5bb08dbf1ef72b61513e0_CB200619_POINT_PHOTO_Yellow_P3_cropped_ALT2_70.jpg",
+    ],
   },
   {
     id: 1,
     color: "#ff7142",
     img: "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a57b61d5a82cf6b01bb8d3_orange_10x10.jpg",
+    header: "Brilliant in every sense.",
+    description:
+      "PointCard uses special color dyes that contain an additive fluorescent pigment, to produce a vibrant surface finish that shows incredible depth under various lighting conditions.",
+    img2: [
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a580ed9e3d57fe39d7e6a2_orangefront_P3_wide_2x_cropped.jpg",
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a580f0d2c8047df263d25b_orangeback_P3_wide_2x_cropped.jpg",
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/619ebd2509cde23d12cae933_3067_OrangePrimary_wide_P3_2x_cropped.jpg",
+    ],
   },
   {
     id: 2,
     color: "#ff73af",
     img: "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a57c9f407a5a46569f6661_blush_10x10.jpg",
+    header: "Formed for function.",
+    description:
+      "Designed for function first. Obsessive attention to detail from conception to production results in an object that is future-forward and distinctive.",
+    img2: [
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a580ede3b210642054cfac_blushfront_P3_wide_2x_cropped.jpg",
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a580ef65cccc22e9cc85b1_blushback_P3_wide_2x_cropped.jpg",
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/619ebaa084f97c9e5d8dd478_2768_BlushPrimary_wide_P3_72020_2x_cropped.jpg",
+      ,
+    ],
   },
   {
     id: 3,
     color: "#00afff",
     img: "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a57c9fd2c804c93d63a0e5_blue_10x10.jpg",
+    header: "Deliberately personal.",
+    description:
+      "Spending is personal. Your card should be too. PointCard membership is uniquely yours, from the virtual to the physical, starting with the moment you select your color",
+    img2: [
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a580edf8821a34f6578ab9_bluefront_P3_wide_2x_cropped.jpg",
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/61a580ee2fd4176ca890fa54_blueback_P3_wide_2x_cropped.jpg",
+      "https://assets-global.website-files.com/5ee7f9eb35bb1852519f534e/619d72a19abcd11fcfd3fdd8_0789_Primaryblue_P3_wide_2x_flipped.jpg",
+    ],
   },
 ];
 

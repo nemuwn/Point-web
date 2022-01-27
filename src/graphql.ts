@@ -415,7 +415,7 @@ export type Order = {
   customerName: Scalars['String'];
   deviceModel: DeviceModel;
   email: Scalars['String'];
-  fintech: Scalars['String'];
+  fintech: Array<Scalars['String']>;
   phoneNumber: Scalars['String'];
   quantity: Scalars['Int'];
 };
