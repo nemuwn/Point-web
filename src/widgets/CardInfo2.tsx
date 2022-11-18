@@ -30,7 +30,7 @@ const Layout = styled.div`
 const CarouselImage = styled.img`
   width: 100%;
   position: relative;
-  top: 10px;
+  top: 120px;
   @media (max-width: 899px) {
     top: 0;
   }
@@ -58,7 +58,7 @@ export const Cardinfo = () => {
       <Container>
         <Grid container alignItems="center" spacing={3}>
           <Grid item xs={12} md={7}>
-            <SubHeader>Designed in Tandem</SubHeader>
+            <SubHeader></SubHeader>
             <Grid container>
               {cardDatas.map((values) => (
                 <Grid item xs={6} md={12} data-aos="fade-up" key={values.id}>
